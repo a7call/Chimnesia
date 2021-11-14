@@ -1,0 +1,18 @@
+title: IntroductionBot.Start
+tags: 
+colorID: 0
+position: 860,368
+---
+<<SetSpeaker FemaleBot focused>>
+Salut à toi jeune testeur ! Comment vas-tu ?
+->Très bien.
+    <<SetSpeaker YOU>>
+    Super ! Je suis tres excite à l'idée d'apprendre le fonctionnement de YarnSpinner
+    <<SetSpeaker FemaleBot>>
+    Tres bien, rentrons tout de suite dans le vif du sujet !
+-> Pas très bien...
+    <<SetSpeaker YOU focused>>
+    Je ne me sens pas trop dans mon assiete...
+    <<SetSpeaker FemaleBot shocked>>
+    J'en suis désole... Je suis certain que l'apprentissage de YarnSpinner te rendra le sourir !
+===

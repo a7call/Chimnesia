@@ -1,0 +1,27 @@
+title: Fin1.Start
+tags: 
+colorID: 0
+position: -387,-478
+---
+Vous émergez d’une sorte de coma obscure. Votre tête vous fait mal.
+[[La contrebasse... |contrebasseFin]]
+[[Rentrez chez vous... |rentrerMaison]]
+===
+title: contrebasseFin
+tags: 
+colorID: 0
+position: -484,-735
+---
+La fillette semble avoir pris la fuite, mais la contrebasse est encore là.
+-> Continuer
+Vous la ramassez.
+-> Continuer (fin du chapitre)
+===
+title: rentrerMaison
+tags: 
+colorID: 0
+position: -164,-733
+---
+Tant bien que mal, Billy rentre chez lui...
+-> Continuer (fin du chapitre)
+===

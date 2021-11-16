@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 82eced0c6e6a8b34a86c2025cfa059ef
+guid: ea277f0292407f04f9c200637fdf0a82
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,13 +10,17 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: fr-FR
   stringIDs:
-  - NewFile (6)-Bot.Start-0
-  - NewFile (6)-Super-1
-  - NewFile (6)-Super-2
-  - NewFile (6)-Super-3
-  - NewFile (6)-Moyen-4
+  - Fin1-Fin1.Start-0
+  - Fin1-Fin1.Start-1
+  - Fin1-Fin1.Start-2
+  - Fin1-contrebasseFin-3
+  - Fin1-contrebasseFin-4
+  - Fin1-contrebasseFin-5
+  - Fin1-contrebasseFin-6
+  - Fin1-rentrerMaison-7
+  - Fin1-rentrerMaison-8
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: 82eced0c6e6a8b34a86c2025cfa059ef, type: 3}
+  baseLanguage: {fileID: 7128917941130120860, guid: ea277f0292407f04f9c200637fdf0a82, type: 3}
   localizations: []

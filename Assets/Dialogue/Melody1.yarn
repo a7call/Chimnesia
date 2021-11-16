@@ -1,0 +1,30 @@
+title: Melody1.Start
+tags: 
+colorID: 0
+position: -530,-519
+---
+Le son devient plus fort et plus désagréable
+-> Continuer
+Billy continue, il voit une petite fille avec une contrebasse.
+[[S'approcher |approcher]]
+[[Observer |RegarderEnfant]]
+-> Faire demi tour
+===
+title: approcher
+tags: 
+colorID: 0
+position: -409,-738
+---
+L’enfant s’arrête de jouer et s’enfuit avec sa contrebasse
+-> Continuer
+===
+title: RegarderEnfant
+tags: 
+colorID: 0
+position: -190,-739
+---
+L’enfant continue de jouer, il s’agit d’une enfant pas plus âgée qu’une dizaine d’année. 
+-> Continuer
+Le son devient vraiment trop insupportable à écouter
+-> Faire demi tour
+===

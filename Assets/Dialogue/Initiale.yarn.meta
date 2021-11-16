@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: 774f3032119001241bad38f1c543ec84
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: fr-FR
+  stringIDs:
+  - Initiale-initiale.Start-0
+  - Initiale-initiale.Start-1
+  - Initiale-initiale.Start-2
+  - Initiale-initiale.Start-3
+  - Initiale-initiale.Start-4
+  - Initiale-initiale.Start-5
+  - Initiale-initiale.Start-6
+  - Initiale-Ohs-7
+  - Initiale-Ohs-8
+  - Initiale-amusie-9
+  - Initiale-amusie-10
+  - Initiale-intrigue-11
+  - Initiale-intrigue-12
+  - Initiale-intrigue-13
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 774f3032119001241bad38f1c543ec84, type: 3}
+  localizations: []

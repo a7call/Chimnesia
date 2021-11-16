@@ -1,0 +1,856 @@
+title: initiale.Start
+tags: 
+colorID: 0
+position: -579,-458
+---
+Alors que vous marchiez dans un quartier peu peuplé à une heure tardive, vous entendez un air de musique
+-> .. de la musique ?
+Enfin, vous auriez entendu un air de musique si vous n’étiez pas contaminé par le CK-2, comme toute cette fichue île.
+-> Le CK-2 ?
+Cet agent chimique a rendu les habitants de l’Ile d’Ohs sujet à une amusie de plus en plus puissante. Et cela fait déjà .. 10 ans.
+[[L'île d'Ohs? |Ohs]]
+[[Une amusie |amusie]]
+===
+title: Ohs
+tags: 
+colorID: 0
+position: -459,-678
+---
+HOLDER
+[[Continuer |intrigue]]
+===
+title: amusie
+tags: 
+colorID: 0
+position: -239,-678
+---
+HOLDER
+[[Continuer |intrigue]]
+===
+title: intrigue
+tags: 
+colorID: 0
+position: -324,-940
+---
+Vous êtes intrigué par ce son. Qui pourrait bien jouer de la musique, sans être capable de l’apprécier ? 
+[[Suivre le son | Melody1.Start]]
+[[L'ignorer |Chimiste.Start ]]
+===
+title: Melody1.Start
+tags: 
+colorID: 0
+position: -530,-519
+---
+Le son devient plus fort et plus désagréable
+-> Continuer
+Billy continue, il voit une petite fille avec une contrebasse.
+[[S'approcher |approcher]]
+[[Observer |RegarderEnfant]]
+[[Faire demi tour | Chimiste.Start]]
+===
+title: approcher
+tags: 
+colorID: 0
+position: -409,-738
+---
+L’enfant s’arrête de jouer et s’enfuit avec sa contrebasse
+[[Continuer | Chimiste.Start]]
+===
+title: RegarderEnfant
+tags: 
+colorID: 0
+position: -190,-739
+---
+L’enfant continue de jouer, il s’agit d’une enfant pas plus âgée qu’une dizaine d’année. 
+-> Continuer
+Le son devient vraiment trop insupportable à écouter
+[[Faire demi tour| Chimiste.Start]]
+===
+title: Chimiste.Start
+tags: 
+colorID: 0
+position: 266,-12
+---
+Chimiste : “He, ça va mon pote ?”
+
+[[Ignorer|Ignorer]]
+[[On se connaît ?|Connait]]
+===
+title: Ignorer
+tags: 
+colorID: 0
+position: 57,-311
+---
+<<custom_wait>>
+Chimiste ; Tu te moques de moi ? He, réponds !
+->continuer
+Il vous aggripe l’épaule
+[[Répondre |repondre]]
+[[S'enerver |Enerver2]]
+===
+title: Connait
+tags: 
+colorID: 0
+position: 559,-189
+---
+Chimiste : On s’est déjà vu non ? Ah, peut être pas.. Moi c’est Bob. Et toi ?
+[[Moi c'est Billy |Billy]]
+[[C'est pas tes affaires. |Enerver]]
+===
+title: Billy
+tags: 
+colorID: 0
+position: 490,-515
+---
+Chimiste ; Cool, tu fais quoi là Billy? 
+[[se promener |promener]]
+[[Chercher à manger|manger]]
+===
+title: Enerver
+tags: 
+colorID: 0
+position: 846,-476
+---
+Chimiste : Woo, le prends pas comme ça. T’es soupe au lait non ?
+[[L'Ignorer |Ignorer]]
+===
+title: promener
+tags: 
+colorID: 0
+position: 312,-802
+---
+Chimiste ; Aaaah je comprends. T’inquiète, j’ai ce que tu cherches *clin d’oeil*
+->..?
+Chimiste : Je vends des Larmes. De bonne facture en plus ! Tu vas adoré !
+[[C'est de la drogue... |inquiete]]
+[[J'ai pas d'argent |argent]]
+===
+title: manger
+tags: 
+colorID: 0
+position: 966,-787
+---
+Chimiste : Ah bah comme tout le monde ! Moi aussi j’ai faim tu sais.. Et mon petit frère ...
+
+[[Compatir |Chacun]]
+[[Je m'en fiche |fiche]]
+[[Ton frère |frere]]
+===
+title: inquiete
+tags: 
+colorID: 0
+position: 90,-1097
+---
+Chimiste : Il faut bien gagner sa vie ! C’est pas très moral, mais mieux être en bon terme avec les Chimistes, tu sais.
+[[Comment fonctionne les Larmes ? |fonctionne]]
+[[Tu t'entends bien avec les Chimistes ? |Chimistes]]
+===
+title: argent
+tags: 
+colorID: 0
+position: 646,-1246
+---
+C’est vraiment pas cher ! Seulement 10 X la Larme. C’est une aubaine tu sais.
+[[Négocier|Negocier]]
+[[J'ai vraiment pas d'argent |Pauvre]]
+[[Je ne suis pas intérressé |Refuser]]
+===
+title: fiche
+tags: 
+colorID: 0
+position: 1113,-1096
+---
+Chimiste ; Tu te moques de moi ? He, réponds ! Il vous aggripe l’épaule.
+[[Répondre |repondre]]
+[[S'enerver |Enerver2]]
+===
+title: frere
+tags: 
+colorID: 0
+position: 1404,-1082
+---
+Chimiste : Il s’appelle Marcel, c’est un bon petit. Mais il est malade
+->Ah ouais...
+Chimiste : Il a besoin de nourriture saine, mais c’est difficile à trouver sur l’Île. Et super cher !
+[[Chacun ses problèmes|Chacun]]
+[[Ah ouais..|ah]]
+===
+title: repondre
+tags: 
+colorID: 0
+position: 1109,-1330
+---
+Chimiste : Tu vois quand tu veux. Moi aussi je passe une sale journée, je fais pas la gueule pour autant.
+[[Tranquille |Tranquille]]
+[[S'enerver|Enerver2]]
+===
+title: Enerver2
+tags: 
+colorID: 0
+position: 1397,-1371
+---
+Chimiste : Eh, joue pas à ça avec moi. Je travaille avec les chimistes, ok ?
+->continuer
+Il a l’air menaçant.
+[[Chercher la bagarre |bagarre]]
+[[(calme) Les Chimistes? |Chimistes]]
+===
+title: Tranquille
+tags: 
+colorID: 0
+position: 1027,-1567
+---
+Chimiste : J’ai de quoi t’aider à passer une bien meilleure journée ! Et vraiment pas cher. Une aubaine pour toi !
+[[De la nourriture |nourriture2]]
+[[De la drogue |Vends]]
+[[Quitter l'île ? |Quitter]]
+===
+title: bagarre
+tags: 
+colorID: 0
+position: 1399,-1630
+---
+Le chimiste vous pousse en arrière violemment.
+-> Envoyer un crochet
+    Il esquive et vous fait trébuchez
+    -> Tomber
+        Vous tombez sur le ventre.
+        -> Se relever
+            Le chimiste vous maîtrise et met le contenu d’une pipette, un étrange liquide bleu, dans vos yeux.
+[[... |Larme]]
+===
+title: Chimistes
+tags: 
+colorID: 0
+position: 2039,-1428
+---
+Chimiste : Ils peuvent faire peur, mais quand tu travailles bien, ils te protègent!
+[[Et la nourriture ?|nourriture]]
+===
+title: Larme
+tags: 
+colorID: 0
+position: 1503,-1896
+---
+Billy consomme la Larme : vers Passé 1
+->Continuer
+===
+title: fonctionne
+tags: 
+colorID: 0
+position: 2012,-1670
+---
+Chimiste : C’est très simple ! Tu ouvres ta pipette, tu verses délicatement le contenu dans ton oeil, et pouf ! La magie opère
+-> Et les effets
+Chimiste : J’en envie de te dire, tu vas revoir les couleurs ! Mais c’ets surtout la musique que tu vas entendre.. celle de tes souvenirs.
+[[Ah d’accord |accord]]
+===
+title: accord
+tags: 
+colorID: 0
+position: 2964,-1714
+---
+Chimiste : Alors, ça te tente ?
+[[continuer |Aquisition]]
+===
+title: nourriture
+tags: 
+colorID: 0
+position: 2906,-1426
+---
+Chimiste : Oui, c’est vrai ce que l’on dit. Les chimistes ont un accès à de la nourriture saine, pas contaminée par le CK-2 !
+[[Comment fonctionne les Larmes ? |fonctionne]]
+[[Ah d’accord. |accord]]
+===
+title: Aquisition
+tags: 
+colorID: 0
+position: 2933,-1979
+---
+Chimiste : Amuse toi bien ! Faut que je file, mon fère, tout ça...
+->Continuer
+Il est déjà parti
+[[Prendre la Larme |Larme]]
+[[Continuer son chemin |Melody3.Start]]
+===
+title: Melody3
+tags: 
+colorID: 0
+position: 2928,-2266
+---
+Billy refuse : vers Melody 3
+===
+title: Chacun
+tags: 
+colorID: 0
+position: 2047,-1138
+---
+Chimiste : Tu pourrais m’acheter un peu de Larmes, franchement ça m’aiderait pas mal.
+-> continuer
+Chimiste : Alors, ça te tente ?
+[[C'est de la drogue... |inquiete2]]
+[[J'ai pas d'argent |argent]]
+===
+title: ah
+tags: 
+colorID: 0
+position: 2914,-826
+---
+Chimiste : J’arrive à lui trouver de la nourriture, mais contaminée au CK-2. Il ne pourra pas guérir avec ça...
+[[ah ouais...|ah2]]
+[[Chacun ses problèmes |Chacun]]
+===
+title: ah2
+tags: 
+colorID: 0
+position: 2914,-1159
+---
+Chimiste : blablabla
+Vous n’écoutez plus ce qu’il dit.
+[[...|Chacun]]
+===
+title: nourriture2
+tags: 
+colorID: 0
+position: 689,-1876
+---
+Chimique : Euh, pas sur moi, mais je connais des gens qui peuvent t’en vendre.
+[[Non merci.|Vends]]
+===
+title: Quitter
+tags: 
+colorID: 0
+position: 1253,-1893
+---
+Chimiste : Euh, non, personne ne peut quitter l’Ïle d’Ohs. C’est pas faute d’avoir essayé !
+[[Continuer |Vends]]
+===
+title: Vends
+tags: 
+colorID: 0
+position: 953,-2147
+---
+Chimiste : Je vends des Larmes. De bonne facture en plus ! Tu vas adoré !
+[[Continuer|accord]]
+===
+title: inquiete2
+tags: 
+colorID: 0
+position: 2374,-1302
+---
+Chimiste : Il faut bien gagner sa vie ! C’est pas très moral, mais mieux être en bon terme avec les Chimistes, tu sais.
+[[Comment fonctionne les Larmes |fonctionne]]
+[[Tu t'entends bien avec les Chimistes ? |Chimistes]]
+===
+title: Negocier
+tags: 
+colorID: 0
+position: 148,-1557
+---
+Chimiste : ... Je comprends, mais on a tous nos problèmes. Moi j’ai mon frère... 
+[[Payer X|Payer]]
+[[Négocier |Negocier2]]
+===
+title: Pauvre
+tags: 
+colorID: 0
+position: 455,-1544
+---
+Chimiste : Ca te manque pas d’entendre la musique, mais la vrai musique, dans nos souvenirs ?
+[[Si beaucoup |Negocier2]]
+===
+title: Payer
+tags: 
+colorID: 0
+position: 62,-1811
+---
+Chimiste : Tu ne vas pas le regretter. Profites bien de la musique pendant ton trip !
+[[Continuer |Larme2]]
+===
+title: Negocier2
+tags: 
+colorID: 0
+position: 333,-1813
+---
+Chimiste : Je peux te proposer pour Y, mais parce que c’est toi.
+[[Payer Y|Larme2]]
+[[Négocier |Negocier3]]
+[[Refuser |Refuser]]
+===
+title: Larme2
+tags: 
+colorID: 0
+position: 98,-2357
+---
+Vous avez maintenant une Larme d’Ohs sur vous.
+[[Comment ça fonctionne |fonctionne]]
+[[Ok |Aquisition]]
+===
+title: Negocier3
+tags: 
+colorID: 0
+position: 346,-2115
+---
+Chimiste : Aller, Y c’est pas si cher ! C’est même un bon prix !
+[[PayerY |Payer]]
+[[Refuser |Refuser]]
+===
+title: Refuser
+tags: 
+colorID: 0
+position: 632,-2104
+---
+Chimiste : tu dis ça parce que tu as jamais tester non ? Je tu jure, tu vas oublier ta faim, entendre à nouveau la musique, c’est génial !
+[[Refuser |Refuser2]]
+[[En prendre |Payer]]
+===
+title: Refuser2
+tags: 
+colorID: 0
+position: 735,-2402
+---
+Chimique : Ecoute, tu prends ça, tu testes, et tu m’en dis des nouvelles, ok ?
+->continuer
+Le chimiste force Billy à prendre la Larme. Il s’agit d’une pipette en verre bouchonnée. A l’intérieur, un liquide bleu semble émettre une faible lumière.
+[[Comment ça fonctionne |fonctionne]]
+[[Ok..|Aquisition]]
+===
+title: Melody3.Start
+tags: 
+colorID: 0
+position: 122,-196
+---
+Situation : Billy a vu le chimiste, il a en sa possession de la drogue. Il trouve Melody, qui ne joue plus mais a une contrebasse dans les mains.
+->Continuer
+Vous continuez votre chemin. La “musique” a cessé, mais vous entendez des bruits étranges.
+->Continuer
+Vous appercevez une petite fille, assise sur le sol, qui tient une contrebasse bien trop grande pour elle.
+-> Continuer
+(Si melody1=true : C’est la petite fille de tout à l’heure)
+[[Observer |Observer]]
+[[Aller lui parler |parler]]
+===
+title: Observer
+tags: 
+colorID: 0
+position: 135,-480
+---
+Elle semble particulièrement intriguée par l’instrument.
+[[Aller lui parler |parler]]
+===
+title: parler
+tags: 
+colorID: 8
+position: 432,-471
+---
+Alors que vous vous approchez, le fille se lève, avec défiance.
+[[Contrebasse|Contrebasse]]
+[[Bruit |Bruit]]
+===
+title: Contrebasse
+tags: 
+colorID: 0
+position: 376,-715
+---
+Melody : Tu connais cet instrument ?
+[[Lui en parler|parler2]]
+===
+title: Bruit
+tags: 
+colorID: 0
+position: 772,-691
+---
+Melody : C’est pas du bruit, le bruit, c’est désagréable. Là, c’est rigolo, tu trouves pas ?
+[[Non|non]]
+[[Pas vraiment |notReally]]
+[[(mentir) Tu joues... bien|mentir]]
+===
+title: parler2
+tags: 
+colorID: 0
+position: 379,-927
+---
+Melody : C’est incroyable ! Mais ça sert à quoi ?
+[[Parler de musique|parler3]]
+===
+title: non
+tags: 
+colorID: 0
+position: 755,-897
+---
+Melody : Eh ! Qu’es ce que tu t’y connais d’abord, le vieux !
+[[Je suis musicien |parler3]]
+===
+title: notReally
+tags: 
+colorID: 0
+position: 995,-900
+---
+Melody : ... Tu pourrais faire mieux ? Je crois pas.
+[[Je suis musicien |parler3]]
+===
+title: mentir
+tags: 
+colorID: 0
+position: 1327,-839
+---
+Melody : Et c’est la première fois que je l’utilises !
+-> Continuer
+Elle pince quelques cordes de l’instrument
+-> Continuer
+L’air désagréable joué par la fillette vous donne mal au crâne.
+-> Amusie
+Melody : L’amu quoi ? Non, je suis pas malade ! T’es malade ?
+-> Tu entends la musique ?
+Melody : bah, je dois m’améliorer, mais c’est un bon début non ?
+->...
+Melody : C'est comment la musique ?
+-> Difficile 
+Melody : Moi, je veux jouer. 
+[[A la toupie ? |toupie]]
+[[De la musique ? |apprendre]]
+===
+title: parler3
+tags: 
+colorID: 0
+position: 393,-1145
+---
+Melody : Maman m’a déjà parlé de ça ... Tu la connais, toi, la musique ?
+->Mais qui es-tu ?
+Melody : Melody ! C’est comme ça que mon papa et ma maman m’ont appelé, mais ils disent que c’est le choix de Papi.
+[[Ton père ? |pere]]
+[[Ta mère ? |mere]]
+[[Ton grand-père ? |grandpere]]
+===
+title: pere
+tags: 
+colorID: 0
+position: 230,-1444
+---
+Melody : Il est mort mon papa. Et toi ? 
+->Je suis vivant
+Melody : Non, ton papa.
+->Il est mort
+Melody : Comme le mien ! C’est incroyable ! 
+[[Et ta mère ? |mere]]
+===
+title: mere
+tags: 
+colorID: 0
+position: 483,-1444
+---
+Melody : Maman élève des cochons, mais ils sont bizarre, genre ils sont contameuné... ou un truc comme ça... Comme Paquerette, quoi.
+[[Paquerette c'est ta maman ?|Paquerette]]
+[["Contaminés, non ?" |Contamine]]
+===
+title: grandpere
+tags: 
+colorID: 0
+position: 857,-1381
+---
+Melody : Oui, il était comme toi un muzizien.
+[[C'est "musicien" |correction]]
+[[Tu l’as connu ? |connu]]
+===
+title: Paquerette
+tags: 
+colorID: 0
+position: 464,-1689
+---
+Melody : Non, paquerette c'est le cochon. Ma maman c'est Anita. Et toi, tu fais quoi ?
+[[... du jazz |jazz]]
+===
+title: Contamine
+tags: 
+colorID: 0
+position: 823,-1664
+---
+Melody : Oui c’est ça ! C’est pas très bon, mais on peut quand même les manger. Et toi, tu fais quoi ?
+[[... ... du jazz |jazz]]
+===
+title: jazz
+tags: 
+colorID: 0
+position: 751,-1955
+---
+Melody : Tu peux me montrer alors ?
+[[Amusie |Amusie]]
+[[Pas d'instrument |instrument]]
+===
+title: Amusie
+tags: 
+colorID: 0
+position: 612,-2206
+---
+Melody : L’amu quoi ? Non, je suis pas malade ! T’es malade ?
+-> Tu entends la musique ?
+Melody : bah, je dois m’améliorer, mais j’aime bien comment ça sonne...
+-> C’était pas fou
+Melody : C'est comment la musique alors ? Moi, je veux jouer. 
+[[De la musique ? |apprendre]]
+===
+title: instrument
+tags: 
+colorID: 0
+position: 901,-2208
+---
+Melody : Moi j’ai une contrebasse. 
+-> Continuer
+Elle vous la tend
+[[La prendre |apprendre]]
+===
+title: apprendre
+tags: 
+colorID: 0
+position: 895,-2451
+---
+Melody : Apprends moi la musique
+-> Continuer
+Vous savez qu’à cause de l’amusie, vous n’entendrez qu’une horrible cacophonie. La Larme vous permettra d’entendre à nouveau un son mélodieux.
+[[Prendre la Larme |Larme4]]
+[[Jouer quand même |Jouer]]
+===
+title: Larme4
+tags: 
+colorID: 0
+position: 855,-2707
+---
+Vous prenez la pipette qui vous a été donnée. Vous mettez son contenu, bleu presque lumineux, dans votre oeil droit.
+-> Continuer
+Melody : Eh, qu’est que tu fais ? Tu as besoin de ça pour entendre la musique ?
+-> Continuer
+ Le monde autour de vous devient trouble
+Vous entendez Melody s’éloigner
+[[Continuer | Passe2.Start]]
+===
+title: Jouer
+tags: 
+colorID: 0
+position: 1235,-2671
+---
+Vous prenez la contrebasse, et comptez sur la mémoire musculaire pour arriver à jouer correctement.
+-> Continuer
+Billy essai d’expliquer la musique à Melody : Melody 3
+-> Continuer
+===
+title: correction
+tags: 
+colorID: 0
+position: 1107,-1632
+---
+Melody : Comme tu veux, le vieux. C’est sa contrebasse que j’ai trouvé. Et toi, tu faisais quoi comme muzique ?
+[[du jazz |jazz]]
+===
+title: connu
+tags: 
+colorID: 0
+position: 1412,-1572
+---
+Non, il est mort avant la cacastrophe. Moi je suis née après.
+[[Née sur l'île ? |Nee]]
+===
+title: Nee
+tags: 
+colorID: 0
+position: 1530,-1793
+---
+Melody : Oui, je suis née dans la zone contameuné... Mais je me sens seule, je vie juste avec maman.
+[[Avec ta mère|mere]]
+===
+title: toupie
+tags: 
+colorID: 0
+position: 1413,-1145
+---
+Melody : Non, de la musique, le vieux !
+[[Continuer | apprendre]]
+===
+title: Passe2.Start
+tags: 
+colorID: 0
+position: -267,-377
+---
+Situation : Billy vient de prende de la drogue pour jouer de la musique. 
+[[Contrebasse |Contrebasse]]
+[[Parler à Charles |Charles]]
+===
+title: Contrebasse
+tags: 
+colorID: 0
+position: -418,-626
+---
+C’est la contrebasse de Charles. C’est lui qui vous a appris à en jouer.
+[[Parler à Charles |Charles]]
+===
+title: Charles
+tags: 
+colorID: 0
+position: -137,-637
+---
+Charles : Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
+->Saluer Charles
+Charles : Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite
+[[Comment ça, prèsque |presque]]
+[[Qui est venu ? |Qui]]
+===
+title: presque
+tags: 
+colorID: 0
+position: -239,-877
+---
+Charles : Je suis content de t’avoir transmis mon exigence, mais on en parlera plus tard. 
+-> Continuer
+Il rigole
+-> Merci pour ça 
+Charles : Mais Billy, fait attention à ne pas faire toruner ta vie autour du jazz uniquement. D’autres choses pimentent la vie !
+-> Comme quoi ?
+Charles : Il y a des choses de la vie à côtés desquelles tu passes. La famille, les amis, le sexe !
+[[C'est toi ma famille |famille]]
+[[J'ai déja des amis |amis]]
+===
+title: Qui
+tags: 
+colorID: 0
+position: 204,-872
+---
+Charles : Tes collègues du Tonws’ sont venus. Je vais te présenter ma fille, et quelques collègues du grand Opéra aussi.
+[[Mes collègues ? |collegues]]
+[[Ta fille ? |fille]]
+===
+title: famille
+tags: 
+colorID: 0
+position: -387,-1105
+---
+Charles : tu sais très bien ce que je veux dire. Rencontre quelqu’un !
+-> Je n’ai pas le temps pour ça
+Ecoute, ma fille est là ce soir. Je ne veux pas vous forcer, mais je suis sûr que vous pourriez bien vous entendre
+[[Elle joue du jazz ? |JoueJazz]]
+[[Elle s’appelle comment ? |Nom]]
+===
+title: amis
+tags: 
+colorID: 0
+position: -125,-1106
+---
+Charles : Ah bon ? Comme qui ?
+[[Anne |Anne]]
+[[Le mec du son là |mec]]
+===
+title: JoueJazz
+tags: 
+colorID: 0
+position: -650,-1478
+---
+Charles : Ah ! Tu ne penses qu’au jazz ! Il y a autres choses dans la vie !
+[[Rien d’aussi passionnant |passionnant]]
+===
+title: Nom
+tags: 
+colorID: 0
+position: -353,-1463
+---
+Charles : Anita. Joli nom, non ? J’ai toujours eu des facilités pour trouver de beaux prénoms.
+[[Elle joue du jazz ? |JoueJazz]]
+===
+title: passionnant
+tags: 
+colorID: 0
+position: -636,-1743
+---
+Charles : Je déséspère te faire rentrer un peu de sagesse dans ta caboche !
+-> Continuer
+Le son de jazz devient distordu, le visual reprend des traits du présent, c’est chelou
+-> Continuer
+Charles : Tu ne comprends rien à la vie ! Tu vas mourir seul, triste !
+-> Quoi ?
+Charles : Sans le jazz, tu n’es plus rien ! Qu’est que tu vas faire maintenant que tu ne peux plus entendre la musique ?
+[[Je vais réentendre la musique un jour |unJour]]
+[[Je m’en sortirais sans |sortir]]
+===
+title: unJour
+tags: 
+colorID: 0
+position: -739,-2008
+---
+Charles : AHAHAH et comment ? Tu es bloqué sur cette île maudite.. Regarde toi, à te drogué
+-> C’est un moyen d’entendre la musique
+Charles : Si j’étais encore en vie, tu sais ce que j’aurais pensé de toi ? Tu es un déchet ...
+[[Continuer | Fin1.Start]]
+===
+title: sortir
+tags: 
+colorID: 0
+position: -418,-2013
+---
+Charles  AHAHAH, tu me fais bien rire. Tu as tout sacrifié pour ta passion, il ne te reste rien maintenant.
+->C'est faux
+Charles : Tu n’as pas capable d’apprécier la vie, même ça, tu l’as sacrifié !
+-> Continuer
+Vous revenez à vous...
+[[Continuer | Fin1.Start]]
+===
+title: Anne
+tags: 
+colorID: 0
+position: -30,-1531
+---
+Charles : La dernière fois que vous avez joué ensemble, ça ne s’est pas très bien passé...
+[[...|passionnant]]
+===
+title: mec
+tags: 
+colorID: 0
+position: 256,-1528
+---
+Charles : Tu ne connais même pas son nom ...
+[[...|passionnant]]
+===
+title: collegues
+tags: 
+colorID: 0
+position: 322,-1092
+---
+Charles : Oui, Anne et les musiciens avec qui vous aviez joué
+-> Anne ?
+Charles : Je sais que la dernière fois que vous avez joué ensemble, ça ne s’est pas très bien passé...
+-> Ah, la pianiste !
+Charles : En dehors du jazz, tu ne fais attention à rien, n’est-ce pas ?
+[[Il n’y a rien d’aussi passionnant |passionnant]]
+===
+title: fille
+tags: 
+colorID: 0
+position: 599,-1043
+---
+Charles : Oui, elle nous attend au bar. Je lui ai beaucoup parlé de toi.
+[[Elle joue du jazz ?| JoueJazz]]
+[[Comment elle s’appelle ? | Nom]]
+===
+title: Fin1.Start
+tags: 
+colorID: 0
+position: -387,-478
+---
+Vous émergez d’une sorte de coma obscure. Votre tête vous fait mal.
+[[La contrebasse... |contrebasseFin]]
+[[Rentrez chez vous... |rentrerMaison]]
+===
+title: contrebasseFin
+tags: 
+colorID: 0
+position: -484,-735
+---
+La fillette semble avoir pris la fuite, mais la contrebasse est encore là.
+-> Continuer
+Vous la ramassez.
+-> Continuer (fin du chapitre)
+===
+title: rentrerMaison
+tags: 
+colorID: 0
+position: -164,-733
+---
+Tant bien que mal, Billy rentre chez lui...
+-> Continuer (fin du chapitre)
+===

@@ -14,7 +14,7 @@ public class ButtonFeedBack : MonoBehaviour
     {
         transform.DOScale(1, 0.4f);
     }
-    public void OnDisable()
+    public void OnEnable()
     {
         transform.localScale = new Vector3(1, 1, 1);
     }

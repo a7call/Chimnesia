@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ee46e2ce00821f6419040f34092bc8c1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: fr-FR
+  stringIDs: []
+  compilationStatus: 0
+  isSuccesfullyCompiled: 0
+  compilationErrorMessage: "Error on line 17 at position 3:\nmismatched input ']'
+    expecting FORMAT_FUNCTION_EXPRESSION_START\r\n[i]Il vous aggripe l\u2019\xE9paule[/i]\r\n 
+    ^"
+  baseLanguage: {instanceID: 0}
+  localizations: []

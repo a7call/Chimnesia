@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: c010321702a80eb48bef309426f21772
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: fr-FR
+  stringIDs:
+  - Melody1-Melody1.Start-0
+  - Melody1-Melody1.Start-1
+  - Melody1-Melody1.Start-2
+  - Melody1-Melody1.Start-3
+  - Melody1-Melody1.Start-4
+  - Melody1-Melody1.Start-5
+  - Melody1-approcher-6
+  - Melody1-approcher-7
+  - Melody1-RegarderEnfant-8
+  - Melody1-RegarderEnfant-9
+  - Melody1-RegarderEnfant-10
+  - Melody1-RegarderEnfant-11
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: c010321702a80eb48bef309426f21772, type: 3}
+  localizations: []

@@ -1,0 +1,164 @@
+title: Passe2.Start
+tags: 
+colorID: 0
+position: -267,-377
+---
+Situation : Billy vient de prende de la drogue pour jouer de la musique. 
+[[Contrebasse |Contrebasse]]
+[[Parler à Charles |Charles]]
+===
+title: Contrebasse
+tags: 
+colorID: 0
+position: -418,-626
+---
+C’est la contrebasse de Charles. C’est lui qui vous a appris à en jouer.
+[[Parler à Charles |Charles]]
+===
+title: Charles
+tags: 
+colorID: 0
+position: -137,-637
+---
+Charles : Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
+->Saluer Charles
+Charles : Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite
+[[Comment ça, prèsque |presque]]
+[[Qui est venu ? |Qui]]
+===
+title: presque
+tags: 
+colorID: 0
+position: -239,-877
+---
+Charles : Je suis content de t’avoir transmis mon exigence, mais on en parlera plus tard. 
+-> Continuer
+Il rigole
+-> Merci pour ça 
+Charles : Mais Billy, fait attention à ne pas faire toruner ta vie autour du jazz uniquement. D’autres choses pimentent la vie !
+-> Comme quoi ?
+Charles : Il y a des choses de la vie à côtés desquelles tu passes. La famille, les amis, le sexe !
+[[C'est toi ma famille |famille]]
+[[J'ai déja des amis |amis]]
+===
+title: Qui
+tags: 
+colorID: 0
+position: 204,-872
+---
+Charles : Tes collègues du Tonws’ sont venus. Je vais te présenter ma fille, et quelques collègues du grand Opéra aussi.
+[[Mes collègues ? |collegues]]
+[[Ta fille ? |fille]]
+===
+title: famille
+tags: 
+colorID: 0
+position: -387,-1105
+---
+Charles : tu sais très bien ce que je veux dire. Rencontre quelqu’un !
+-> Je n’ai pas le temps pour ça
+Ecoute, ma fille est là ce soir. Je ne veux pas vous forcer, mais je suis sûr que vous pourriez bien vous entendre
+[[Elle joue du jazz ? |JoueJazz]]
+[[Elle s’appelle comment ? |Nom]]
+===
+title: amis
+tags: 
+colorID: 0
+position: -125,-1106
+---
+Charles : Ah bon ? Comme qui ?
+[[Anne |Anne]]
+[[Le mec du son là |mec]]
+===
+title: JoueJazz
+tags: 
+colorID: 0
+position: -650,-1478
+---
+Charles : Ah ! Tu ne penses qu’au jazz ! Il y a autres choses dans la vie !
+[[Rien d’aussi passionnant |passionnant]]
+===
+title: Nom
+tags: 
+colorID: 0
+position: -353,-1463
+---
+Charles : Anita. Joli nom, non ? J’ai toujours eu des facilités pour trouver de beaux prénoms.
+[[Elle joue du jazz ? |JoueJazz]]
+===
+title: passionnant
+tags: 
+colorID: 0
+position: -636,-1743
+---
+Charles : Je déséspère te faire rentrer un peu de sagesse dans ta caboche !
+-> Continuer
+Le son de jazz devient distordu, le visual reprend des traits du présent, c’est chelou
+-> Continuer
+Charles : Tu ne comprends rien à la vie ! Tu vas mourir seul, triste !
+-> Quoi ?
+Charles : Sans le jazz, tu n’es plus rien ! Qu’est que tu vas faire maintenant que tu ne peux plus entendre la musique ?
+[[Je vais réentendre la musique un jour |unJour]]
+[[Je m’en sortirais sans |sortir]]
+===
+title: unJour
+tags: 
+colorID: 0
+position: -739,-2008
+---
+Charles : AHAHAH et comment ? Tu es bloqué sur cette île maudite.. Regarde toi, à te drogué
+-> C’est un moyen d’entendre la musique
+Charles : Si j’étais encore en vie, tu sais ce que j’aurais pensé de toi ? Tu es un déchet ...
+-> Continuer
+Vous revenez à vous...
+-> Continuer
+===
+title: sortir
+tags: 
+colorID: 0
+position: -418,-2013
+---
+Charles  AHAHAH, tu me fais bien rire. Tu as tout sacrifié pour ta passion, il ne te reste rien maintenant.
+->C'est faux
+Charles : Tu n’as pas capable d’apprécier la vie, même ça, tu l’as sacrifié !
+-> Continuer
+Vous revenez à vous...
+-> Continuer
+===
+title: Anne
+tags: 
+colorID: 0
+position: -30,-1531
+---
+Charles : La dernière fois que vous avez joué ensemble, ça ne s’est pas très bien passé...
+[[...|passionnant]]
+===
+title: mec
+tags: 
+colorID: 0
+position: 256,-1528
+---
+Charles : Tu ne connais même pas son nom ...
+[[...|passionnant]]
+===
+title: collegues
+tags: 
+colorID: 0
+position: 322,-1092
+---
+Charles : Oui, Anne et les musiciens avec qui vous aviez joué
+-> Anne ?
+Charles : Je sais que la dernière fois que vous avez joué ensemble, ça ne s’est pas très bien passé...
+-> Ah, la pianiste !
+Charles : En dehors du jazz, tu ne fais attention à rien, n’est-ce pas ?
+[[Il n’y a rien d’aussi passionnant |passionnant]]
+===
+title: fille
+tags: 
+colorID: 0
+position: 599,-1043
+---
+Charles : Oui, elle nous attend au bar. Je lui ai beaucoup parlé de toi.
+[[Elle joue du jazz ?| JoueJazz]]
+[[Comment elle s’appelle ? | Nom]]
+===

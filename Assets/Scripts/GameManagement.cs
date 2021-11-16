@@ -137,42 +137,42 @@ public class GameManagement : Singleton<GameManagement>
 
     private void DisableOptions(GameObject selectedOption)
     {
-        runner.GetComponent<DialogueUI>().optionButtons.ForEach(x =>
-        {
-            if (x.gameObject != selectedOption)
-            {
-                if (!x.gameObject.activeSelf)
-                    return;
+        //runner.GetComponent<DialogueUI>().optionButtons.ForEach(x =>
+        //{
+        //    if (x.gameObject != selectedOption)
+        //    {
+        //        if (!x.gameObject.activeSelf)
+        //            return;
 
-                var image = x.transform.GetComponent<Image>();
-                image.DOFade(0, 0.2f).OnComplete(() =>
-                {
-                    image.gameObject.SetActive(false);
-                    image.DOFade(buttonAlpha, 0.01f);
-                });
+        //        var image = x.transform.GetComponent<Image>();
+        //        image.DOFade(0, 0.2f).OnComplete(() =>
+        //        {
+        //            image.gameObject.SetActive(false);
+        //            image.DOFade(buttonAlpha, 0.01f);
+        //        });
 
-                var text = x.gameObject.GetComponentInChildren<TextMeshProUGUI>();
-                text.DOFade(0, 0.2f).OnComplete(() =>
-                {
-                    text.DOFade(1, 0.1f);
-                });
-            }
-            else
-            {
-                var image = x.transform.GetComponent<Image>();
-                image.DOFade(0, 0.8f).OnComplete(() =>
-                {
-                    image.gameObject.SetActive(false);
-                    image.DOFade(buttonAlpha, 0.01f);
-                });
+        //        var text = x.gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        //        text.DOFade(0, 0.2f).OnComplete(() =>
+        //        {
+        //            text.DOFade(1, 0.1f);
+        //        });
+        //    }
+        //    else
+        //    {
+        //        var image = x.transform.GetComponent<Image>();
+        //        image.DOFade(0, 1f).OnComplete(() =>
+        //        {
+        //            image.gameObject.SetActive(false);
+        //            image.DOFade(buttonAlpha, 0.01f);
+        //        });
 
-                var text = x.gameObject.GetComponentInChildren<TextMeshProUGUI>();
-                text.DOFade(0, 0.8f).OnComplete(() =>
-                {
-                    text.DOFade(1, 0.1f);
-                });
-            }
-        });
+        //        var text = x.gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        //        text.DOFade(0, 0.4f).OnComplete(() =>
+        //        {
+        //            text.DOFade(1, 0.1f);
+        //        });
+        //    }
+        //});
     }
 
     public void EndDialogue()

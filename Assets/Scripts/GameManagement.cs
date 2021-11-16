@@ -5,7 +5,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Yarn.Unity;
 using UnityEngine.UI;
+using DG.Tweening;
 using TMPro;
+
 
 public class GameManagement : Singleton<GameManagement>
 {
@@ -23,7 +25,7 @@ public class GameManagement : Singleton<GameManagement>
     [SerializeField] GameObject player;
     [SerializeField] List<Transform> playerPositions;
     private int position = 0;
-    
+
 
     public DialogueRunner runner;
 
@@ -31,10 +33,20 @@ public class GameManagement : Singleton<GameManagement>
 
     public NPC currentNPC { get; set; }
 
+    private float panelAlpha;
+    private float buttonAlpha;
+    private DialogueUI dialUi;
+
     protected override void Awake()
     {
         base.Awake();
-       
+        dialUi = runner.GetComponent<DialogueUI>();
+        panelAlpha = dialUi.GetComponent<Image>().color.a;
+        dialUi.optionButtons.ForEach(x =>
+        {
+            buttonAlpha = x.transform.GetComponent<Image>().color.a;
+        });
+
     }
     private void Start()
     {
@@ -50,7 +62,7 @@ public class GameManagement : Singleton<GameManagement>
     }
     public void MoveForward()
     {
-        if (playerPositions.Count <= position +1)
+        if (playerPositions.Count <= position + 1)
             return;
 
         position++;
@@ -84,7 +96,7 @@ public class GameManagement : Singleton<GameManagement>
         string emotion = info.Length > 1 ? info[1].ToLower() : SpeakerData.EMOTION_NEUTRAL;
         print(emotion);
 
-        if(speakerDataBase.TryGetValue(speaker, out SpeakerData data))
+        if (speakerDataBase.TryGetValue(speaker, out SpeakerData data))
         {
             speakerPortrait.sprite = data.GetEmotionPortrait(emotion);
             //txt_speakerName.text = data.speakerName;
@@ -93,8 +105,8 @@ public class GameManagement : Singleton<GameManagement>
         {
             Debug.LogErrorFormat("Could not set speaker info for unknown speaker {0}", speaker);
         }
-       
-        
+
+
     }
     public void StartDialogue()
     {
@@ -115,4 +127,63 @@ public class GameManagement : Singleton<GameManagement>
     {
         UnActiveDuringDialogue.ForEach(n => n.SetActive(active));
     }
+    public Vector3 punch;
+    public float duration;
+    public void EndOptions()
+    {
+        var selectedOption = EventSystem.current.currentSelectedGameObject;
+        DisableOptions(selectedOption);
+    }
+
+    private void DisableOptions(GameObject selectedOption)
+    {
+        runner.GetComponent<DialogueUI>().optionButtons.ForEach(x =>
+        {
+            if (x.gameObject != selectedOption)
+            {
+                if (!x.gameObject.activeSelf)
+                    return;
+
+                var image = x.transform.GetComponent<Image>();
+                image.DOFade(0, 0.2f).OnComplete(() =>
+                {
+                    image.gameObject.SetActive(false);
+                    image.DOFade(buttonAlpha, 0.01f);
+                });
+
+                var text = x.gameObject.GetComponentInChildren<TextMeshProUGUI>();
+                text.DOFade(0, 0.2f).OnComplete(() =>
+                {
+                    text.DOFade(1, 0.1f);
+                });
+            }
+            else
+            {
+                var image = x.transform.GetComponent<Image>();
+                image.DOFade(0, 0.8f).OnComplete(() =>
+                {
+                    image.gameObject.SetActive(false);
+                    image.DOFade(buttonAlpha, 0.01f);
+                });
+
+                var text = x.gameObject.GetComponentInChildren<TextMeshProUGUI>();
+                text.DOFade(0, 0.8f).OnComplete(() =>
+                {
+                    text.DOFade(1, 0.1f);
+                });
+            }
+        });
+    }
+
+    public void EndDialogue()
+    {
+        dialUi.dialogueContainer.GetComponent<Image>().DOFade(0, 0.2f);
+        dialUi.dialogueContainer.transform.DOScale(0, 0.5f).SetEase(Ease.InExpo).OnComplete(() => {
+            dialUi.dialogueContainer.GetComponent<Image>().DOFade(panelAlpha, 0.1f);
+            dialUi.dialogueContainer.transform.DOScale(1, 0.1f);
+            runner.GetComponent<DialogueUI>().dialogueContainer.SetActive(false);
+            });
+    }
 }
+
+

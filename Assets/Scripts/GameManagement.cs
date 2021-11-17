@@ -50,7 +50,8 @@ public class GameManagement : Singleton<GameManagement>
     }
     private void Start()
     {
-        dialogueUI.SetActive(false);
+        dialUi.dialogueContainer = dialogueUI;
+       // dialogueUI.SetActive(false);
         runner.AddCommandHandler("SetSpeaker", SetSpeakerInfo);
         runner.AddCommandHandler("PlaySound", PlaySoudFX);
     }
@@ -113,7 +114,7 @@ public class GameManagement : Singleton<GameManagement>
         isInDialogue = true;
         currentNPC = EventSystem.current.currentSelectedGameObject.GetComponent<NPC>();
         dialogueUI.SetActive(true);
-        SetNPCState(false);
+        //SetNPCState(false);
         runner.StartDialogue(currentNPC.YarnStartNode);
     }
 
@@ -121,12 +122,12 @@ public class GameManagement : Singleton<GameManagement>
     {
         isInDialogue = false;
         runner.GetComponent<DialogueUI>().optionButtons.ForEach(o => o.gameObject.SetActive(false));
-        SetNPCState(true);
+        //SetNPCState(true);
     }
-    public void SetNPCState(bool active)
-    {
-        UnActiveDuringDialogue.ForEach(n => n.SetActive(active));
-    }
+    //public void SetNPCState(bool active)
+    //{
+    //    UnActiveDuringDialogue.ForEach(n => n.SetActive(active));
+    //}
     public Vector3 punch;
     public float duration;
     public void EndOptions()

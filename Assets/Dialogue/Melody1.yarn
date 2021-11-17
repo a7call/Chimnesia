@@ -1,63 +1,36 @@
-title: Melody1.Start
+title: Melody1.1
 tags: 
 colorID: 0
 position: -530,-519
 ---
-Vous vous approchez de la source du son, qui devient de plus en plus désagréable.
+(Vous vous approchez de la source du son, qui devient de plus en plus désagréable.)
 -> Continuer
-Dans une cour cachée de la rue par un mur en pierre, vous trouvez une petite fille avec une contrebasse dans les mains
+(Dans une cour cachée de la rue par un mur en pierre, vous trouvez une petite fille avec une contrebasse dans les mains.)
 [[S'approcher |approcher]]
 [[Observer |RegarderEnfant]]
--> Faire demi tour
+[[Faire demi tour | Chimiste.1]]
 ===
-title: Melody1.3
+title: Melody1.3.1
 tags: 
 colorID: 0
 position: -409,-738
 ---
-Lorsqu'elle remarque votre présence, l’enfant s’arrête de jouer et s’enfuit avec sa contrebasse.
--> Retourner sur vos pas
+(Lorsqu'elle remarque votre présence, l’enfant s’arrête de jouer et s’enfuit avec sa contrebasse.)
+[[Retourner sur vos pas| Chimiste.1]]
 ===
-title: Melody1.4.1
+title: Melody1.3.2
 tags: 
 colorID: 0
 position: -190,-739
 ---
-L’enfant continue de jouer. Elle n'a probablement pas plus d'une dizaine d'années, et joue avec les cordes de la contrebasse l'air fasciné.
+(L’enfant continue de jouer. Elle n'a probablement pas plus d'une dizaine d'années, et joue avec les cordes de la contrebasse l'air fasciné.)
 -> Continuer
-===
-title: Melody1.4.2
-tags: 
-colorID: 0
-position: -409,-738
----
-Plus elle joue avec la contrebasse, plus le bruit devient insupportable à entendre.
+(Plus elle joue avec la contrebasse, plus le bruit devient insupportable à entendre.)
 -> Continuer
-===
-title: Melody1.4.3
-tags: 
-colorID: 0
-position: -409,-738
----
-La douleur devient si forte que votre vision se trouve pendant quelques secondes.
+(La douleur devient si forte que votre vision se trouve pendant quelques secondes.)
 -> Continuer
-===
-title: Melody1.4.4
-tags: 
-colorID: 0
-position: -409,-738
----
-Lorsque vous reprenez conscience de ce qui vous entoure, le son distordu semble avoir disparu.
+(Lorsque vous reprenez conscience de ce qui vous entoure, le son distordu semble avoir disparu.)
 -> Continuer
-===
-title: Melody1.4.5
-tags: 
-colorID: 0
-position: -409,-738
----
-La petite fille à la contrebasse est partie.
--> Retourner sur vos pas
-===
-Le son devient vraiment trop insupportable à écouter
--> Faire demi tour
+(La petite fille à la contrebasse est partie.)
+[[Retourner sur vos pas| Chimiste.1]]
 ===

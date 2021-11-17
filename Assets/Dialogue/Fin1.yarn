@@ -1,27 +1,27 @@
-title: Fin1.Start
+title: Fin1.1
 tags: 
 colorID: 0
 position: -387,-478
 ---
-Vous émergez d’une sorte de coma obscure. Votre tête vous fait mal.
-[[La contrebasse... |contrebasseFin]]
+(Vous émergez d’une sorte de coma obscur. Votre tête vous fait mal, et il vous faut un peu de temps avant de vous rappeler où vous êtes.)
+[[Prendre la contrebasse |contrebasseFin]]
 [[Rentrez chez vous... |rentrerMaison]]
 ===
-title: contrebasseFin
+title: Fin1.2
 tags: 
 colorID: 0
 position: -484,-735
 ---
-La fillette semble avoir pris la fuite, mais la contrebasse est encore là.
+(La fillette semble avoir pris la fuite, mais la contrebasse est encore là.)
 -> Continuer
-Vous la ramassez.
--> Continuer (fin du chapitre)
+(Vous la ramassez. Son poids familier vous rappelle votre vie d’avant-guerre, glorieuse et remplie de concerts et de musique. Si seulement vous pouviez y retourner...)
+-> Finir le chapitre
 ===
-title: rentrerMaison
+title: Fin1.3
 tags: 
 colorID: 0
 position: -164,-733
 ---
-Tant bien que mal, Billy rentre chez lui...
--> Continuer (fin du chapitre)
+(Vous laissez la contrebasse, peut-être que Melody reviendra la chercher plus tard. Vous repartez de la ruelle, les bras ballants, la faim toujours au ventre. Peut-être que vous trouverez quelque chose à manger sur le chemin du retour.)
+-> Finir le chapitre
 ===

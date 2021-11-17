@@ -1,0 +1,35 @@
+﻿title: Fin2.1
+tags: 
+colorID: 0
+position: -530,-519
+---
+(L’exercice vous a collé une migraine monstre, et vous n’entendez qu’un bruit très  désagréable)
+-> Continuer
+Mais tu es trop fort en fait !
+[[Merci |Fin2.1]]
+[[Je t'avais dit que j'étais un musicien |Fin2.2]]
+===
+title: Fin2.2.1
+tags: 
+colorID: 0
+position: -530,-519
+---
+Moi aussi je veux devenir une muzizienne !
+[[Continuer |Fin2.2.2]]
+===
+title: Fin2.2.2
+tags: 
+colorID: 0
+position: -530,-519
+---
+Tu m'apprendras à jouer comme toi ?
+->Oui, si tu veux
+Trop bien ! Merci !
+->Continuer
+Il est déjà tard : Je dois rentrer, Maman va s'inquiéter...
+->Continuer
+Tu reviendras hein ? Au fond, tu es vachement sympa ! A plus !
+->Attends !
+(Avant que vous n’ayiez eu le temps de lui répondre, Melody est déjà partie. Vous vous rendez compte que vous souriez, pendant un moment emporté par la joie et l’innocence qu’elle dégage.)
+-> Finir le chapitre
+===

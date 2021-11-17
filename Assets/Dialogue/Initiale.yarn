@@ -1,38 +1,38 @@
-title: initiale.Start
+title: Initiale.1
 tags: 
 colorID: 0
 position: -579,-458
 ---
-Alors que vous marchiez dans un quartier peu peuplé à une heure tardive, vous entendez un air de musique
+(Alors que vous marchiez dans un quartier peu peuplé à une heure tardive, vous entendez un air de musique)
 -> .. de la musique ?
-Enfin, vous auriez entendu un air de musique si vous n’étiez pas contaminé par le CK-2, comme toute cette fichue île.
+(Enfin, vous auriez entendu un air de musique si vous n’étiez pas contaminé par le CK-2, comme toute cette fichue île.)
 -> Le CK-2 ?
-Cet agent chimique a rendu les habitants de l’Ile d’Ohs sujet à une amusie de plus en plus puissante. Et cela fait déjà .. 10 ans.
-[[L'île d'Ohs? |Ohs]]
-[[Une amusie |amusie]]
+(Cet agent chimique a rendu les habitants de l’Ile d’Ohs sujet à une amusie de plus en plus puissante. Et cela fait déjà .. 10 ans.)
+[[L'île d'Ohs? |Initiale.2.1]]
+[[Une amusie |Initiale.2.2]]
 ===
-title: Ohs
+title: Initiale.2.1
 tags: 
 colorID: 0
 position: -459,-678
 ---
-HOLDER
-[[Continuer |intrigue]]
+(La Zone, plutôt, comme on l'appelle depuis le bombardement.)
+[[Continuer |Initiale.3]]
 ===
-title: amusie
+title: Initiale.2.2
 tags: 
 colorID: 0
 position: -239,-678
 ---
-HOLDER
-[[Continuer |intrigue]]
+(Peut-être que les autres s'y sont fait, mais pour un musicien, ne plus pouvoir écouter de musique, c'est une catastrophe. Et ce bruit qu'on entend à la place insupportable !)
+[[Continuer |Initiale.3]]
 ===
-title: intrigue
+title: Initiale.3
 tags: 
 colorID: 0
 position: -324,-940
 ---
-Vous êtes intrigué par ce son. Qui pourrait bien jouer de la musique, sans être capable de l’apprécier ? 
--> Suivre le son
--> l'ignorer
+(Vous êtes intrigué par ce son. Qui pourrait bien jouer de la musique, sans être capable de l’apprécier ?)
+[[Suivre le son |Melody1.1]]
+[[L'ignorer |Chimiste.1]]
 ===

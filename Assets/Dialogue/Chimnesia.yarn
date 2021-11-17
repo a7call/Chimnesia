@@ -672,6 +672,7 @@ tags:
 colorID: 0
 position: -267,-377
 ---
+<<GoPast>>
 Situation : Billy vient de prende de la drogue pour jouer de la musique. 
 [[Contrebasse |Contrebasse]]
 [[Parler à Charles |Charles]]
@@ -689,6 +690,8 @@ tags:
 colorID: 0
 position: -137,-637
 ---
+<<CharleInterract>>
+<<SetSpeaker Charles>>
 Charles : Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
 ->Saluer Charles
 Charles : Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite

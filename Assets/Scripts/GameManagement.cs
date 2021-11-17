@@ -16,15 +16,15 @@ public class GameManagement : Singleton<GameManagement>
     [Header("Dialogue UI")]
     [SerializeField] GameObject dialogueUI;
     [SerializeField] Image speakerPortrait;
+    [SerializeField] GameObject txt_speakerName;
+    public List<SpeakerData> speakers;
 
     [Header("BackGround")]
     [SerializeField] Image PresentBackgroundImage;
     [SerializeField] Image PastBackgroundImage;
+    [SerializeField] Animator bgAnimator;
 
     //[SerializeField] TextMeshProUGUI txt_speakerName;
-
-    [Header("NPC")]
-    [SerializeField] List<GameObject> UnActiveDuringDialogue;
 
     [Header("Player")]
     [SerializeField] GameObject player;
@@ -33,6 +33,8 @@ public class GameManagement : Singleton<GameManagement>
 
 
     public DialogueRunner runner;
+
+  
 
     Dictionary<string, SpeakerData> speakerDataBase = new Dictionary<string, SpeakerData>();
 
@@ -52,6 +54,8 @@ public class GameManagement : Singleton<GameManagement>
             buttonAlpha = x.transform.GetComponent<Image>().color.a;
         });
 
+        speakers.ForEach(s => AddSpeaker(s));
+
     }
     private void Start()
     {
@@ -61,6 +65,7 @@ public class GameManagement : Singleton<GameManagement>
         runner.AddCommandHandler("PlaySoundFx", PlaySoudFX);
         runner.AddCommandHandler("ChangeAmbiance", PlayAmbiance);
         runner.AddCommandHandler("GoPast", GoToPast);
+        runner.AddCommandHandler("CharleInterract", PastCharleInteraction);
     }
 
     private void PlayAmbiance(string[] parameters)
@@ -68,6 +73,7 @@ public class GameManagement : Singleton<GameManagement>
         // TO BE IMPLEMENTED
     }
 
+    public bool isInPresent = true;
     private void GoToPast(string[] parameters)
     {
         if (isInPresent)
@@ -84,29 +90,9 @@ public class GameManagement : Singleton<GameManagement>
         }
     }
 
-    public bool isInPresent = true;
-    private void ChangeTemp()
+    public void PastCharleInteraction(string[] parameters)
     {
-        if (isInPresent)
-        {
-            isInPresent = false;
-            PresentBackgroundImage.DOFade(0, 1f).OnComplete(() => PresentBackgroundImage.gameObject.SetActive(false));
-            PastBackgroundImage.gameObject.SetActive(true);
-            PastBackgroundImage.DOFade(1, 1f);
-        }
-        else
-        {
-            isInPresent = true;
-            PresentBackgroundImage.gameObject.SetActive(true);
-            PresentBackgroundImage.DOFade(1, 1f);
-            PastBackgroundImage.DOFade(0, 1f).OnComplete(() => PastBackgroundImage.gameObject.SetActive(false));
-        }
-       
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            ChangeTemp();
+        bgAnimator.SetTrigger("Interact");
     }
     public void PlaySoudFX(string[] info)
     {
@@ -152,7 +138,8 @@ public class GameManagement : Singleton<GameManagement>
         if (speakerDataBase.TryGetValue(speaker, out SpeakerData data))
         {
             speakerPortrait.sprite = data.GetEmotionPortrait(emotion);
-            //txt_speakerName.text = data.speakerName;
+            
+            txt_speakerName.GetComponent<TextMeshProUGUI>().text = data.speakerName;
         }
         else
         {
@@ -182,6 +169,8 @@ public class GameManagement : Singleton<GameManagement>
     //}
     public Vector3 punch;
     public float duration;
+
+
     public void EndOptions()
     {
         var selectedOption = EventSystem.current.currentSelectedGameObject;

@@ -6,7 +6,7 @@ position: 122,-196
 (Vous continuez votre chemin. Le bruit que vous entendiez tout à l'heure a cessé, mais il y a toujours quelqu'un.)
 ->Continuer
 (Vous appercevez une petite fille, assise sur le sol, qui tient une contrebasse bien trop grande pour elle.)
-<<if visited("Chimiste.7") is true>>
+<<if visited("Melody1.1") is true>>
 (Vous remarquez qu'il s'agit de la même petite fille que tout à l'heure.)
 <<endif>>
 [[L'observer de loin |Melody3.2.1]]
@@ -101,7 +101,7 @@ position: 1327,-839
 ---
 (Le bruit devient vraiment insupportable. Votre vision se trouve, et vous vacillez.)
 -> Continuer
-Melody: Eh qu'ets-ce qui t'arrives ? Ca va pas ?
+Melody: Eh qu'est-ce qui t'arrives ? Ca va pas ?
 [[Ca te faît pas mal aux oreilles ? |Melody3.5.2]]
 ===
 title: Melody3.5.2
@@ -248,7 +248,7 @@ position: 855,-2707
 -> Continuer
 Melody: Eh, qu’est que tu fais ? Tu as besoin de ça pour entendre la musique ?
 -> Continuer
- Le monde autour de vous devient trouble
+(Le monde autour de vous devient trouble)
 -> Continuer
 (Vous entendez Melody s’éloigner)
 [[Continuer |Passe.Start]]
@@ -258,7 +258,7 @@ tags:
 colorID: 0
 position: 1235,-2671
 ---
-Vous prenez la contrebasse, et comptez sur la mémoire musculaire pour vous permettre de jouer correctement.
+(Vous prenez la contrebasse, et comptez sur la mémoire musculaire pour vous permettre de jouer correctement.)
 [[Continuer |Puzzle.Start]]
 ===
 title: Melody3.4.3.1

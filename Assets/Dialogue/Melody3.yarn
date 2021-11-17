@@ -1,251 +1,281 @@
-title: Melody3.Start
+title: Melody3.1
 tags: 
 colorID: 0
 position: 122,-196
 ---
-Situation : Billy a vu le chimiste, il a en sa possession de la drogue. Il trouve Melody, qui ne joue plus mais a une contrebasse dans les mains.
+(Vous continuez votre chemin. Le bruit que vous entendiez tout à l'heure a cessé, mais il y a toujours quelqu'un.)
 ->Continuer
-Vous continuez votre chemin. La “musique” a cessé, mais vous entendez des bruits étranges.
-->Continuer
-Vous appercevez une petite fille, assise sur le sol, qui tient une contrebasse bien trop grande pour elle.
-(Si melody1=true : C’est la petite fille de tout à l’heure)
-[[Observer |Observer]]
-[[Aller lui parler |parler]]
+(Vous appercevez une petite fille, assise sur le sol, qui tient une contrebasse bien trop grande pour elle.)
+<<if visited("Chimiste.7") is true>>
+(Vous remarquez qu'il s'agit de la même petite fille que tout à l'heure.)
+<<endif>>
+[[L'observer de loin |Melody3.2.1]]
+[[Aller lui parler |Melody3.2.2]]
 ===
-title: Observer
+title: Melody3.2.1
 tags: 
 colorID: 0
 position: 135,-480
 ---
-Elle semble particulièrement intriguée par l’instrument.
-[[Aller lui parler |parler]]
+(Elle semble particulièrement attachée à l’instrument, qu'elle nettoie avec soin.)
+[[Aller lui parler |Melody3.2.2]]
 ===
-title: parler
+title: Melody3.2.2
 tags: 
 colorID: 8
 position: 432,-471
 ---
-Alors que vous vous approchez, le fille se lève, avec défiance.
-[[Contrebasse|Contrebasse]]
-[[Bruit |Bruit]]
+(Lorsqu'elle vous aperçoit, elle vous sourit et continue à s'occuper de la contrebasse.)
+[[C'est un bel instrument|Melody3.3.1]]
+[[C'est toi qui faisait ce bruit ? |Melody3.3.2]]
 ===
-title: Contrebasse
+title: Melody3.3.1
 tags: 
 colorID: 0
 position: 376,-715
 ---
-Melody : Tu connais cet instrument ?
-[[Lui en parler|parler2]]
+Melody: Oui ! Tu connais ?
+-> Je connais bien, oui...
+Melody: Trop bien ! Mais ça sert à quoi ?
+[[A jouer de la musique |Melody3.4]]
 ===
-title: Bruit
+title: Melody3.3.2
 tags: 
 colorID: 0
 position: 772,-691
 ---
-Melody : C’est pas du bruit, le bruit, c’est désagréable. Là, c’est rigolo, tu trouves pas ?
-[[Non|non]]
-[[Pas vraiment |notReally]]
-[[(mentir) Tu joues... bien|mentir]]
+Melody: C’est pas du bruit, le bruit, c’est désagréable. Là, c’est rigolo, tu trouves pas ?
+(Elle joue avec les cordes de la contrebasse, ce qui crée un bruit désagréable.)
+[[Non|Melody3.3.2.1]]
+[[Pas vraiment |Melody3.3.1.2]]
+[[(mentir) Tu joues... bien|Melody5]]
 ===
-title: parler2
-tags: 
-colorID: 0
-position: 379,-927
----
-Melody : C’est incroyable ! Mais ça sert à quoi ?
-[[Parler de musique|parler3]]
-===
-title: non
+title: Melody3.3.2.1
 tags: 
 colorID: 0
 position: 755,-897
 ---
-Melody : Eh ! Qu’es ce que tu t’y connais d’abord, le vieux !
-[[Je suis musicien |parler3]]
+Melody: Eh ! Qu’es ce que tu t’y connais d’abord, le vieux !
+[[Je suis musicien |Melody3.4]]
 ===
-title: notReally
+title: Melody3.1.2
 tags: 
 colorID: 0
 position: 995,-900
 ---
-Melody : ... Tu pourrais faire mieux ? Je crois pas.
-[[Je suis musicien |parler3]]
+Melody: ... Tu pourrais faire mieux ? Je crois pas.
+[[Je suis musicien |Melody3.4]]
 ===
-title: mentir
+title: Melody3.5
 tags: 
 colorID: 0
 position: 1327,-839
 ---
-Melody : Et c’est la première fois que je l’utilises !
+Melody: C'est vrai, tu trouves ? Attend, je sais faire d'autres trucs aussi...
 -> Continuer
-Elle pince quelques cordes de l’instrument
--> Continuer
-L’air désagréable joué par la fillette vous donne mal au crâne.
--> Amusie
-Melody : L’amu quoi ? Non, je suis pas malade ! T’es malade ?
--> Tu entends la musique ?
-Melody : bah, je dois m’améliorer, mais c’est un bon début non ?
-->...
-Melody : C'est comment la musique ?
--> Difficile 
-Melody : Moi, je veux jouer. 
-[[A la toupie ? |toupie]]
-[[De la musique ? |apprendre]]
+(L'air désagréable joué par la fillette vous donne mal au crâne)
+[[Ah, arrête ça ! |Melody3.5.1.1]]
+[[... tu peux arrêter s'il te plaît ? |Melody3.5.1.2]]
+[[La laisser continuer |Melody3.5.1.3]]
 ===
-title: parler3
+title: Melody3.5.1.1
+tags: 
+colorID: 0
+position: 1327,-839
+---
+Melody: Hein ? Pourquoi ?
+[[Ca te faît pas mal aux oreilles ? |Melody3.5.2]]
+===
+title: Melody3.5.1.2
+tags: 
+colorID: 0
+position: 1327,-839
+---
+Melody: Ah bon tu aimes pas ? Et ça ?
+[[Arrête ça ! |Melody3.5.1.1]]
+===
+title: Melody3.5.1.3
+tags: 
+colorID: 0
+position: 1327,-839
+---
+(Le bruit devient vraiment insupportable. Votre vision se trouve, et vous vacillez.)
+-> Continuer
+Melody: Eh qu'ets-ce qui t'arrives ? Ca va pas ?
+[[Ca te faît pas mal aux oreilles ? |Melody3.5.2]]
+===
+title: Melody3.5.2
+tags: 
+colorID: 0
+position: 1327,-839
+---
+Melody: Non, pourquoi ? Moi je trouve ça rigolo !
+-> Continuer
+(Vous vous demandez si vous devenez fou, ou si cette gamine n'est réellement pas touchée par l'amusie.)
+->Mais... qui es-tu ?
+Melody: Melody ! Et toi ?
+[[Tu n'as pas d'amusie ? |Melody3.6.1]]
+===
+title: Melody3.4
 tags: 
 colorID: 0
 position: 393,-1145
 ---
-Melody : Maman m’a déjà parlé de ça ... Tu la connais, toi, la musique ?
+Melody: Maman m’a déjà parlé de ça ... Tu la connais, toi, la musique ?
 ->Mais qui es-tu ?
-Melody : Melody ! C’est comme ça que mon papa et ma maman m’ont appelé, mais ils disent que c’est le choix de Papi.
-[[Ton père ? |pere]]
-[[Ta mère ? |mere]]
-[[Ton grand-père ? |grandpere]]
+Melody: Melody ! C’est comme ça que mon papa et ma maman m’ont appelé, mais ils disent que c’est le choix de Papi.
+[[Ton père ? |Melody3.4.2]]
+[[Ta mère ? |Melody3.4.1]]
+[[Ton grand-père ? |Melody3.4.3]]
 ===
-title: pere
+title: Melody3.4.2
 tags: 
 colorID: 0
 position: 230,-1444
 ---
-Melody : Il est mort mon papa. Et toi ? 
+Melody: Il est mort mon papa. Et toi ? 
 ->Je suis vivant
-Melody : Non, ton papa.
+Melody: Non, ton papa.
 ->Il est mort
-Melody : Comme le mien ! C’est incroyable ! 
-[[Et ta mère ? |mere]]
+Melody: Comme le mien ! C’est incroyable ! 
+[[Et ta mère ? |Melody3.4.1]]
 ===
-title: mere
+title: Melody3.4.1
 tags: 
 colorID: 0
 position: 483,-1444
 ---
-Melody : Maman élève des cochons, mais ils sont bizarre, genre ils sont contameuné... ou un truc comme ça... Comme Paquerette, quoi.
-[[Paquerette c'est ta maman ?|Paquerette]]
-[["Contaminés, non ?" |Contamine]]
+Melody: Maman élève des cochons, mais ils sont bizarre, genre ils sont contameuné... ou un truc comme ça... Comme Sophie, quoi.
+[[Paquerette c'est ta maman ?|Melody3.4.1.1]]
+[["Contaminés, non ?" |Melody3.4.1.2]]
 ===
-title: grandpere
+title: Melody3.4.3
 tags: 
 colorID: 0
 position: 857,-1381
 ---
-Melody : Oui, il était comme toi un muzizien.
-[[C'est "musicien" |correction]]
-[[Tu l’as connu ? |connu]]
+Melody: Oui, il était comme toi un muzizien.
+[[C'est "musicien" |Melody3.4.3.1]]
+[[Tu l’as connu ? |Melody3.4.3.2]]
 ===
-title: Paquerette
+title: Melody3.4.1.1
 tags: 
 colorID: 0
 position: 464,-1689
 ---
-Melody : Non, paquerette c'est le cochon. Ma maman c'est Anita. Et toi, tu fais quoi ?
+Melody: Non, Sophie c'est le cochon. Ma maman c'est Anita. Et toi, tu fais quoi ?
+<<if visited("Passe.31") is true>>
+[[Anita ? La fille de Charles ? |Melody3.4.1.1.1]]
+<<else>>
 [[... du jazz |jazz]]
+<<endif>>
 ===
-title: Contamine
+title: Melody3.4.1.1.1
 tags: 
 colorID: 0
 position: 823,-1664
 ---
-Melody : Oui c’est ça ! C’est pas très bon, mais on peut quand même les manger. Et toi, tu fais quoi ?
-[[... ... du jazz |jazz]]
+Melody: Charles c'est mon papi ! Tu le connais ?
+->Oui, avant...
+Melody: Maman disait qu'il était très fort en muzique ! Toi aussi tu dois être trop fort en muzique !
+[[...on peut dire ça |Melody3.6]]
 ===
-title: jazz
+title: Melody3.4.1.2
+tags: 
+colorID: 0
+position: 823,-1664
+---
+Melody: Oui c’est ça ! C’est pas très bon, mais on peut quand même les manger. Et toi, tu fais quoi ?
+[[... ... du jazz |Melody3.6]]
+===
+title: Melody3.6
 tags: 
 colorID: 0
 position: 751,-1955
 ---
-Melody : Tu peux me montrer alors ?
-[[Amusie |Amusie]]
-[[Pas d'instrument |instrument]]
+Melody: Tu peux me montrer alors ?
+[[Pas avec cette amusie |Melody3.6.1]]
+[[Je n'ai pas d'instrument |Melody3.6.2]]
 ===
-title: Amusie
+title: Melody3.6.1
 tags: 
 colorID: 0
 position: 612,-2206
 ---
-Melody : L’amu quoi ? Non, je suis pas malade ! T’es malade ?
+Melody: L’amu quoi ? Non, je suis pas malade ! T’es malade ?
 -> Tu entends la musique ?
-Melody : bah, je dois m’améliorer, mais j’aime bien comment ça sonne...
+Melody: Bah, je dois m’améliorer, mais j’aime bien comment ça sonne...
 -> C’était pas fou
-Melody : C'est comment la musique alors ? Moi, je veux jouer. 
+Melody: C'est comment la musique alors ? Moi, je veux jouer. 
 [[De la musique ? |apprendre]]
 ===
-title: instrument
+title: Melody3.6.2
 tags: 
 colorID: 0
 position: 901,-2208
 ---
-Melody : Moi j’ai une contrebasse. 
--> Continuer
-Elle vous la tend
+Melody: Moi j’ai une contrebasse. 
+(Elle vous tend l'instrument.)
 [[La prendre |apprendre]]
 ===
-title: apprendre
+title: Melody3.7
 tags: 
 colorID: 0
 position: 895,-2451
 ---
-Melody : Apprends moi la musique
--> Continuer
-Vous savez qu’à cause de l’amusie, vous n’entendrez qu’une horrible cacophonie. La Larme vous permettra d’entendre à nouveau un son mélodieux.
-[[Prendre la Larme |Larme4]]
-[[Jouer quand même |Jouer]]
+Melody: Apprends moi la musique
+<<if visited("Passe2.Start") is false>>
+[[Continuer |Melody3.7.1]]
+<<else>>
+[[Continuer |Melody3.7.2]]
+<<endif>>
 ===
-title: Larme4
+title: Melody3.7.1
+tags: 
+colorID: 0
+position: 895,-2451
+---
+(Vous savez qu’à cause de l’amusie, vous n’entendrez qu’une horrible cacophonie. La Larme vous permettra d’entendre à nouveau un son mélodieux.)
+[[Prendre la Larme |Melody3.8]]
+[[Jouer quand même |Melody3.7.2]]
+===
+title: Melody3.8
 tags: 
 colorID: 0
 position: 855,-2707
 ---
-Vous prenez la pipette qui vous a été donnée. Vous mettez son contenu, bleu presque lumineux, dans votre oeil droit.
+(Vous prenez la pipette qui vous a été donnée. Vous mettez son contenu, bleu presque lumineux, dans votre oeil droit.)
 -> Continuer
-Melody : Eh, qu’est que tu fais ? Tu as besoin de ça pour entendre la musique ?
+Melody: Eh, qu’est que tu fais ? Tu as besoin de ça pour entendre la musique ?
 -> Continuer
  Le monde autour de vous devient trouble
-Vous entendez Melody s’éloigner
 -> Continuer
-Billy se drogue pour jouer : Passé 2
--> Continuer
+(Vous entendez Melody s’éloigner)
+[[Continuer |Passe.Start]]
 ===
-title: Jouer
+title: melody3.7.2
 tags: 
 colorID: 0
 position: 1235,-2671
 ---
-Vous prenez la contrebasse, et comptez sur la mémoire musculaire pour arriver à jouer correctement.
--> Continuer
-Billy essai d’expliquer la musique à Melody : Melody 3
--> Continuer
+Vous prenez la contrebasse, et comptez sur la mémoire musculaire pour vous permettre de jouer correctement.
+[[Continuer |Puzzle.Start]]
 ===
-title: correction
+title: Melody3.4.3.1
 tags: 
 colorID: 0
 position: 1107,-1632
 ---
-Melody : Comme tu veux, le vieux. C’est sa contrebasse que j’ai trouvé. Et toi, tu faisais quoi comme muzique ?
-[[du jazz |jazz]]
+Melody: Comme tu veux, le vieux. C’est sa contrebasse que j’ai trouvé. Et toi, tu faisais quoi comme muzique ?
+[[Du jazz |Melody3.6]]
 ===
-title: connu
+title: Melody3.4.3.2
 tags: 
 colorID: 0
 position: 1412,-1572
 ---
-Non, il est mort avant la cacastrophe. Moi je suis née après.
-[[Née sur l'île ? |Nee]]
-===
-title: Nee
-tags: 
-colorID: 0
-position: 1530,-1793
----
-Melody : Oui, je suis née dans la zone contameuné... Mais je me sens seule, je vie juste avec maman.
-[[Avec ta mère|mere]]
-===
-title: toupie
-tags: 
-colorID: 0
-position: 1413,-1145
----
-Melody : Non, de la musique, le vieux !
-[[Continuer | apprendre]]
+Melody: Non, il est mort avant la cacastrophe. Moi je suis née après.
+->Née après ?
+Melody: Oui, je suis née dans La Zone. Mais j'aurais bien aimé le connaître, on est que toutes les deux avec maman.
+[[Avec ta mère ? |Melody3.4.1]]
 ===

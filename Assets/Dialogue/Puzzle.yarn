@@ -1,0 +1,114 @@
+﻿title: Puzzle.Start
+tags:
+colorID: 0
+position: -267,-377
+---
+ Déjà, qu’est ce qu’est c’est, la musique ?
+[[Quelque chose de beau|Puzzle.3]]
+
+===
+title: Puzzle.1
+tags:
+colorID: 0
+position: 
+---
+Attends, je connais pas ce mot. C’est quoi le rapport avec la musique ? 
+
+[[La composition|Puzzle.1]]
+[[La science du son|Puzzle.2]]
+[[Des instruments|Puzzle.3]]
+===
+title: Puzzle.2
+tags:
+colorID: 0
+position: 
+---
+Tu es sûr que tu n’es pas en train d’inventer ça ? Qu'est qui constitue la musique ?
+[[Le rythme|Puzzle.1]]
+[[Sa poésie|Puzzle.3]]
+[[Des émotions|Puzzle.4]]
+===
+title: Puzzle.3
+tags:
+colorID: 0
+position: 
+---
+Mais ça veut rien dire ça
+[[Des harmonies|Puzzle.1]]
+[[Une philosophie de vie|Puzzle.2]]
+[[De l'Art|Puzzle.3]]
+===
+title: Puzzle.4
+tags:
+colorID: 0
+position: 
+---
+La musique, c’est comme des émotions ? Je crois que je vois.. Tu peux me montrer ?
+->Lui montrer
+(Vous posez vois doigts sur la contrebasse pour jouer une courte mélodie. )
+[[Continuer|Puzzle.41]]
+===
+title: Puzzle.41
+tags:
+colorID: 0
+position: 
+---
+(Il va falloir retrouver la bonne suite d’acord pour satisfaire la fillette.)
+
+[[Mi mineure 7ème|Puzzle.42]]
+[[Sol dièse|Puzzle.5]]
+[[Sol dièse|Puzzle.5]]
+===
+title: Puzzle.42
+tags:
+colorID: 0
+position: 
+---
+C’est joli, continue !
+-> Continuer
+(Vous sentez que la musique distordue vous donne mal à la tête)
+[[La 7ème|Puzzle.43]]
+[[Sol dièse|Puzzle.5]]
+[[Sol dièse|Puzzle.5]]
+[[Laisser tomber|Puzzle.6]]
+===
+title: Puzzle.43
+tags:
+colorID: 0
+position: 
+---
+C’est joli, continue !
+-> Continuer
+(La fillette semble apprécier, mais votre tête commence à tourner)
+
+[[Ré mineure 7èmé 7ème|Puzzle.7]]
+[[Sol dièse|Puzzle.5]]
+[[Sol dièse|Puzzle.5]]
+[[Laisser tomber|Puzzle.6]]
+===
+title: Puzzle.5
+tags:
+colorID: 0
+position: 
+---
+(Mélodie fait la moue. Ce n’était pas la bonne suite...)
+[[Recommencer|Puzzle.41]]
+===
+title: Puzzle.6
+tags:
+colorID: 0
+position: 
+---
+(Vous n’arrivez pas à faire entendre la musique à Melody.)
+[[S'excuser|FinNulle.Start]]
+===
+title: Puzzle.7
+tags:
+colorID: 0
+position: 
+---
+Wouaaa !
+-> Continuer
+(La fillette vous remercie pour lui avoir montrer la musique. Son sourire brille d’une sincérité que vous n’avaiez pas vu depuis longtemps.)
+[[...|Fin2.Start]]
+===

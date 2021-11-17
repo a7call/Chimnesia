@@ -3,162 +3,159 @@ tags:
 colorID: 0
 position: -267,-377
 ---
-Situation : Billy vient de prende de la drogue pour jouer de la musique. 
-[[Contrebasse |Contrebasse]]
-[[Parler à Charles |Charles]]
+Vous appercevez une silhouette qui semble venir se superposer à la réalité...
+-> Parler à Charles
+Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
+->Remercier Charles
+Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite
+[[Comment ça, presque |Passe.1]]
+[[Qui est venu ? |Passe.2]]
+
 ===
-title: Contrebasse
-tags: 
-colorID: 0
-position: -418,-626
----
-C’est la contrebasse de Charles. C’est lui qui vous a appris à en jouer.
-[[Parler à Charles |Charles]]
-===
-title: Charles
-tags: 
-colorID: 0
-position: -137,-637
----
-Charles : Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
-->Saluer Charles
-Charles : Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite
-[[Comment ça, prèsque |presque]]
-[[Qui est venu ? |Qui]]
-===
-title: presque
+title: Passe.1
 tags: 
 colorID: 0
 position: -239,-877
 ---
 Charles : Je suis content de t’avoir transmis mon exigence, mais on en parlera plus tard. 
 -> Continuer
-Il rigole
+(Il rigole)
 -> Merci pour ça 
-Charles : Mais Billy, fait attention à ne pas faire toruner ta vie autour du jazz uniquement. D’autres choses pimentent la vie !
+Mais Billy, fait attention à ne pas faire toruner ta vie autour du jazz uniquement. D’autres choses pimentent la vie !
 -> Comme quoi ?
-Charles : Il y a des choses de la vie à côtés desquelles tu passes. La famille, les amis, le sexe !
-[[C'est toi ma famille |famille]]
-[[J'ai déja des amis |amis]]
+Il y a des choses de la vie à côtés desquelles tu passes. La famille, les amis, le sexe !
+[[C'est toi ma famille |Passe.3]]
+[[J'ai déja des amis |Passe.4]]
 ===
-title: Qui
+title: Passe.2
 tags: 
 colorID: 0
 position: 204,-872
 ---
-Charles : Tes collègues du Tonws’ sont venus. Je vais te présenter ma fille, et quelques collègues du grand Opéra aussi.
-[[Mes collègues ? |collegues]]
-[[Ta fille ? |fille]]
+Tes collègues du Tonws’ sont venus. Je vais te présenter ma fille, et quelques collègues du grand Opéra aussi.
+[[Mes collègues ? |Passe.21]]
+[[Ta fille ? |Passe.5]]
 ===
-title: famille
+title: Passe.3
 tags: 
 colorID: 0
 position: -387,-1105
 ---
-Charles : tu sais très bien ce que je veux dire. Rencontre quelqu’un !
+Tu sais très bien ce que je veux dire. Rencontre quelqu’un !
 -> Je n’ai pas le temps pour ça
 Ecoute, ma fille est là ce soir. Je ne veux pas vous forcer, mais je suis sûr que vous pourriez bien vous entendre
-[[Elle joue du jazz ? |JoueJazz]]
-[[Elle s’appelle comment ? |Nom]]
+[[Elle joue du jazz ? |Passe.32]]
+[[Elle s’appelle comment ? |Passe.31]]
 ===
-title: amis
+title: Passe.4
 tags: 
 colorID: 0
 position: -125,-1106
 ---
-Charles : Ah bon ? Comme qui ?
-[[Anne |Anne]]
-[[Le mec du son là |mec]]
+Ah bon ? Comme qui ?
+[[Anne |Passe.41]]
+[[Le mec du son là |Passe.42]]
 ===
-title: JoueJazz
+title: Passe.32
 tags: 
 colorID: 0
 position: -650,-1478
 ---
-Charles : Ah ! Tu ne penses qu’au jazz ! Il y a autres choses dans la vie !
-[[Rien d’aussi passionnant |passionnant]]
+Ah ! Tu ne penses qu’au jazz ! Il y a autres choses dans la vie !
+[[Rien d’aussi passionnant |Passe.6]]
 ===
-title: Nom
+title: Passe.31
 tags: 
 colorID: 0
 position: -353,-1463
 ---
-Charles : Anita. Joli nom, non ? J’ai toujours eu des facilités pour trouver de beaux prénoms.
-[[Elle joue du jazz ? |JoueJazz]]
+Anita. Joli nom, non ? J’ai toujours eu des facilités pour trouver de beaux prénoms.
+[[Elle joue du jazz ? |Passe.32]]
+<<if visited("Malody3.4.1.1") is false>>
+    [[Anita ? La mère de Melody ?|Passe.7]]
+<<endif>>
 ===
-title: passionnant
+title: Passe.6
 tags: 
 colorID: 0
 position: -636,-1743
 ---
-Charles : Je déséspère te faire rentrer un peu de sagesse dans ta caboche !
+Je déséspère te faire rentrer un peu de sagesse dans ta caboche !
 -> Continuer
-Le son de jazz devient distordu, le visual reprend des traits du présent, c’est chelou
+(Vous commencez à vous sentir mal...)
 -> Continuer
-Charles : Tu ne comprends rien à la vie ! Tu vas mourir seul, triste !
+Tu ne comprends rien à la vie ! Tu vas mourir seul, triste !
 -> Quoi ?
-Charles : Sans le jazz, tu n’es plus rien ! Qu’est que tu vas faire maintenant que tu ne peux plus entendre la musique ?
-[[Je vais réentendre la musique un jour |unJour]]
-[[Je m’en sortirais sans |sortir]]
+Sans le jazz, tu n’es plus rien ! Qu’est que tu vas faire maintenant que tu ne peux plus entendre la musique ?
+[[Je vais réentendre la musique un jour |Passe.61]]
+[[Je m’en sortirais sans |Passe.62]]
 ===
-title: unJour
+title: Passe.61
 tags: 
 colorID: 0
 position: -739,-2008
 ---
-Charles : AHAHAH et comment ? Tu es bloqué sur cette île maudite.. Regarde toi, à te drogué
+AHAHAH et comment ? Tu es bloqué sur cette île maudite.. Regarde toi, à te drogué
 -> C’est un moyen d’entendre la musique
-Charles : Si j’étais encore en vie, tu sais ce que j’aurais pensé de toi ? Tu es un déchet ...
+Si j’étais encore en vie, tu sais ce que j’aurais pensé de toi ? Tu es un déchet ...
 -> Continuer
-Vous revenez à vous...
--> Continuer
+(Vous revenez à vous...)
+<<if visited("Melody3.1") is false>>
+    [[Continuer|Melody3.Start]]
+<<else>>
+    [[Continuer|Fin1.Start]]
+<<endif>>
 ===
-title: sortir
+title: Passe.62
 tags: 
 colorID: 0
 position: -418,-2013
 ---
-Charles  AHAHAH, tu me fais bien rire. Tu as tout sacrifié pour ta passion, il ne te reste rien maintenant.
+ AHAHAH, tu me fais bien rire. Tu as tout sacrifié pour ta passion, il ne te reste rien maintenant.
 ->C'est faux
 Charles : Tu n’as pas capable d’apprécier la vie, même ça, tu l’as sacrifié !
 -> Continuer
-Vous revenez à vous...
--> Continuer
+(Vous revenez à vous...)
+<<if visited("Melody3.1") is false>>
+    [[Continuer|Melody3.Start]]
+<<else>>
+    [[Continuer|Fin1.Start]]
+<<endif>>
 ===
-title: Anne
+title: Passe.41
 tags: 
 colorID: 0
 position: -30,-1531
 ---
-Charles : La dernière fois que vous avez joué ensemble, ça ne s’est pas très bien passé...
-[[...|passionnant]]
+ La dernière fois que vous avez joué ensemble, ça ne s’est pas très bien passé...
+[[...|Passe.6]]
 ===
-title: mec
+title: Passe.42
 tags: 
 colorID: 0
 position: 256,-1528
 ---
-Charles : Tu ne connais même pas son nom ...
-[[...|passionnant]]
+Tu ne connais même pas son nom ...
+[[...|Passe.6]]
 ===
-title: collegues
+title: Passe.21
 tags: 
 colorID: 0
 position: 322,-1092
 ---
-Charles : Oui, Anne et les musiciens avec qui vous aviez joué
+Oui, Anne et les musiciens avec qui vous aviez joué
 -> Anne ?
-Charles : Je sais que la dernière fois que vous avez joué ensemble, ça ne s’est pas très bien passé...
+Je sais que la dernière fois que vous avez joué ensemble, ça ne s’est pas très bien passé...
 -> Ah, la pianiste !
-Charles : En dehors du jazz, tu ne fais attention à rien, n’est-ce pas ?
-[[Il n’y a rien d’aussi passionnant |passionnant]]
+En dehors du jazz, tu ne fais attention à rien, n’est-ce pas ?
+[[Il n’y a rien d’aussi passionnant |Passe.6]]
 ===
-title: fille
+title: Passe.22
 tags: 
 colorID: 0
 position: 599,-1043
 ---
-Charles : Oui, elle nous attend au bar. Je lui ai beaucoup parlé de toi.
-[[Elle joue du jazz ?| JoueJazz]]
-[[Comment elle s’appelle ? | Nom]]
+Oui, elle nous attend au bar. Je lui ai beaucoup parlé de toi.
+[[Elle joue du jazz ?| Passe.32]]
+[[Comment elle s’appelle ? | Passe.31]]
 ===

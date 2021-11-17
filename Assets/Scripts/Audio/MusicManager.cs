@@ -14,7 +14,7 @@ public class MusicManager : Singleton<MusicManager>
 
     private void Start()
     {
-		Play("AmbianceMusic1");
+		Play("AmbianceMeteoZone");
     }
     public void Play(string sound, ulong delay = 0)
 	{

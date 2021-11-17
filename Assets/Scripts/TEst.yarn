@@ -1,0 +1,25 @@
+title: Start
+tags: 
+colorID: 0
+position: -575,-588
+---
+<<if visited("Start") is false>>
+Player: Hey, Sally.
+-> Continuer
+Sally: Oh! Hi.
+[[Oui |Oui]]
+<<else>>
+Sally: I remember you!
+-> Continuer
+Player: Hello again.
+[[Oui |Oui]]
+<<endif>>
+===
+title: Oui
+tags: 
+colorID: 0
+position: -202,-599
+---
+Ok
+[[Revenir|Start]]
+===

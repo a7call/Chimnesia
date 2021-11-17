@@ -7,7 +7,7 @@ using Yarn.Unity;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
-
+using System;
 
 public class GameManagement : Singleton<GameManagement>
 {
@@ -16,6 +16,11 @@ public class GameManagement : Singleton<GameManagement>
     [Header("Dialogue UI")]
     [SerializeField] GameObject dialogueUI;
     [SerializeField] Image speakerPortrait;
+
+    [Header("BackGround")]
+    [SerializeField] Image PresentBackgroundImage;
+    [SerializeField] Image PastBackgroundImage;
+
     //[SerializeField] TextMeshProUGUI txt_speakerName;
 
     [Header("NPC")]
@@ -53,9 +58,56 @@ public class GameManagement : Singleton<GameManagement>
         dialUi.dialogueContainer = dialogueUI;
        // dialogueUI.SetActive(false);
         runner.AddCommandHandler("SetSpeaker", SetSpeakerInfo);
-        runner.AddCommandHandler("PlaySound", PlaySoudFX);
+        runner.AddCommandHandler("PlaySoundFx", PlaySoudFX);
+        runner.AddCommandHandler("ChangeAmbiance", PlayAmbiance);
+        runner.AddCommandHandler("GoPast", GoToPast);
     }
 
+    private void PlayAmbiance(string[] parameters)
+    {
+        // TO BE IMPLEMENTED
+    }
+
+    private void GoToPast(string[] parameters)
+    {
+        if (isInPresent)
+        {
+            isInPresent = false;
+            PresentBackgroundImage.DOFade(0, 1f);
+            PastBackgroundImage.DOFade(1, 1f);
+        }
+        else
+        {
+            isInPresent = true;
+            PresentBackgroundImage.DOFade(1, 1f);
+            PastBackgroundImage.DOFade(0, 1f);
+        }
+    }
+
+    public bool isInPresent = true;
+    private void ChangeTemp()
+    {
+        if (isInPresent)
+        {
+            isInPresent = false;
+            PresentBackgroundImage.DOFade(0, 1f).OnComplete(() => PresentBackgroundImage.gameObject.SetActive(false));
+            PastBackgroundImage.gameObject.SetActive(true);
+            PastBackgroundImage.DOFade(1, 1f);
+        }
+        else
+        {
+            isInPresent = true;
+            PresentBackgroundImage.gameObject.SetActive(true);
+            PresentBackgroundImage.DOFade(1, 1f);
+            PastBackgroundImage.DOFade(0, 1f).OnComplete(() => PastBackgroundImage.gameObject.SetActive(false));
+        }
+       
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            ChangeTemp();
+    }
     public void PlaySoudFX(string[] info)
     {
         string soundName = info[0];

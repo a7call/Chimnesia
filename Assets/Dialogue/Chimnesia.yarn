@@ -673,6 +673,7 @@ colorID: 0
 position: -267,-377
 ---
 <<GoPast>>
+<<SetSpeaker none>>
 Situation : Billy vient de prende de la drogue pour jouer de la musique. 
 [[Contrebasse |Contrebasse]]
 [[Parler à Charles |Charles]]
@@ -682,6 +683,7 @@ tags:
 colorID: 0
 position: -418,-626
 ---
+<<ContrebasseInterract>>
 C’est la contrebasse de Charles. C’est lui qui vous a appris à en jouer.
 [[Parler à Charles |Charles]]
 ===
@@ -837,6 +839,7 @@ tags:
 colorID: 0
 position: -387,-478
 ---
+<<GoPast>>
 Vous émergez d’une sorte de coma obscure. Votre tête vous fait mal.
 [[La contrebasse... |contrebasseFin]]
 [[Rentrez chez vous... |rentrerMaison]]

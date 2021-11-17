@@ -238,6 +238,9 @@ MonoBehaviour:
   txt_speakerName: {fileID: 1444739505}
   speakers:
   - {fileID: 11400000, guid: 7dc62b51d67bd1d4094381998816c25f, type: 2}
+  - {fileID: 11400000, guid: c2953faed99250a4484d6d100fd300a6, type: 2}
+  - {fileID: 11400000, guid: f7f520ba554291b4684332c5033df29d, type: 2}
+  - {fileID: 11400000, guid: 6167838ce84534941aae5509d90502f5, type: 2}
   PresentBackgroundImage: {fileID: 1844667444}
   PastBackgroundImage: {fileID: 1892202525}
   bgAnimator: {fileID: 1892202527}
@@ -248,6 +251,7 @@ MonoBehaviour:
   - {fileID: 0}
   runner: {fileID: 1209624838}
   isInPresent: 1
+  isContrebasse: 0
   punch: {x: 0.2, y: 0.2, z: 0}
   duration: 1
 --- !u!114 &112300309
@@ -1102,7 +1106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &562197458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1823,7 +1827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14020ebbfa4d4874c9eb4b9b74dc5329, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2045,7 +2049,7 @@ MonoBehaviour:
   textLanguage: 
   variableStorage: {fileID: 1209624837}
   dialogueUI: {fileID: 1209624836}
-  startNode: Passe2.Start
+  startNode: sortir
   startAutomatically: 1
   onNodeStart:
     m_PersistentCalls:
@@ -3239,7 +3243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1844667443
 RectTransform:
   m_ObjectHideFlags: 0

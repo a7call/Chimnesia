@@ -66,6 +66,7 @@ public class GameManagement : Singleton<GameManagement>
         runner.AddCommandHandler("ChangeAmbiance", PlayAmbiance);
         runner.AddCommandHandler("GoPast", GoToPast);
         runner.AddCommandHandler("CharleInterract", PastCharleInteraction);
+        runner.AddCommandHandler("ContrebasseInterract", PastContrebasseInteraction);
     }
 
     private void PlayAmbiance(string[] parameters)
@@ -89,10 +90,19 @@ public class GameManagement : Singleton<GameManagement>
             PastBackgroundImage.DOFade(0, 1f);
         }
     }
-
+    public bool isContrebasse = false;
     public void PastCharleInteraction(string[] parameters)
     {
+        if (isContrebasse)
+            bgAnimator.SetTrigger("RevertContrebasse");
+
         bgAnimator.SetTrigger("Interact");
+    }
+    public void PastContrebasseInteraction(string[] parameters)
+    {
+
+        isContrebasse = true;
+        bgAnimator.SetTrigger("InteractContrebasse");
     }
     public void PlaySoudFX(string[] info)
     {
@@ -131,14 +141,27 @@ public class GameManagement : Singleton<GameManagement>
 
     void SetSpeakerInfo(string[] info)
     {
-        string speaker = info[0];
+        if (info[0] == "none")
+        {
+            speakerPortrait.gameObject.SetActive(false);
+            txt_speakerName.transform.parent.gameObject.SetActive(false);
+            return;
+        }
+
+        txt_speakerName.transform.parent.gameObject.SetActive(true);
+        var speaker = info[0];
         string emotion = info.Length > 1 ? info[1].ToLower() : SpeakerData.EMOTION_NEUTRAL;
         print(emotion);
 
         if (speakerDataBase.TryGetValue(speaker, out SpeakerData data))
         {
-            speakerPortrait.sprite = data.GetEmotionPortrait(emotion);
             
+            speakerPortrait.sprite = data.GetEmotionPortrait(emotion);
+            if (data.GetEmotionPortrait(emotion) == null)
+                speakerPortrait.gameObject.SetActive(false);
+            else
+                speakerPortrait.gameObject.SetActive(true);
+
             txt_speakerName.GetComponent<TextMeshProUGUI>().text = data.speakerName;
         }
         else
@@ -153,7 +176,6 @@ public class GameManagement : Singleton<GameManagement>
         isInDialogue = true;
         currentNPC = EventSystem.current.currentSelectedGameObject.GetComponent<NPC>();
         dialogueUI.SetActive(true);
-        //SetNPCState(false);
         runner.StartDialogue(currentNPC.YarnStartNode);
     }
 
@@ -161,62 +183,18 @@ public class GameManagement : Singleton<GameManagement>
     {
         isInDialogue = false;
         runner.GetComponent<DialogueUI>().optionButtons.ForEach(o => o.gameObject.SetActive(false));
-        //SetNPCState(true);
     }
-    //public void SetNPCState(bool active)
-    //{
-    //    UnActiveDuringDialogue.ForEach(n => n.SetActive(active));
-    //}
+
     public Vector3 punch;
     public float duration;
 
 
     public void EndOptions()
     {
-        var selectedOption = EventSystem.current.currentSelectedGameObject;
-        DisableOptions(selectedOption);
+        var selectedOption = EventSystem.current.currentSelectedGameObject;      
     }
 
-    private void DisableOptions(GameObject selectedOption)
-    {
-        //runner.GetComponent<DialogueUI>().optionButtons.ForEach(x =>
-        //{
-        //    if (x.gameObject != selectedOption)
-        //    {
-        //        if (!x.gameObject.activeSelf)
-        //            return;
-
-        //        var image = x.transform.GetComponent<Image>();
-        //        image.DOFade(0, 0.2f).OnComplete(() =>
-        //        {
-        //            image.gameObject.SetActive(false);
-        //            image.DOFade(buttonAlpha, 0.01f);
-        //        });
-
-        //        var text = x.gameObject.GetComponentInChildren<TextMeshProUGUI>();
-        //        text.DOFade(0, 0.2f).OnComplete(() =>
-        //        {
-        //            text.DOFade(1, 0.1f);
-        //        });
-        //    }
-        //    else
-        //    {
-        //        var image = x.transform.GetComponent<Image>();
-        //        image.DOFade(0, 1f).OnComplete(() =>
-        //        {
-        //            image.gameObject.SetActive(false);
-        //            image.DOFade(buttonAlpha, 0.01f);
-        //        });
-
-        //        var text = x.gameObject.GetComponentInChildren<TextMeshProUGUI>();
-        //        text.DOFade(0, 0.4f).OnComplete(() =>
-        //        {
-        //            text.DOFade(1, 0.1f);
-        //        });
-        //    }
-        //});
-    }
-
+   
     public void EndDialogue()
     {
         dialUi.dialogueContainer.GetComponent<Image>().DOFade(0, 0.2f);

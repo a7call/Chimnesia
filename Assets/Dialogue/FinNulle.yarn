@@ -1,40 +1,40 @@
-﻿title: Fin1.1
+﻿title: FinNulle.Start
 tags: 
 colorID: 0
 position: -387,-478
 ---
 (Votre incapacité à jouer correctement vous frustre, et vous reposez brusquement la contrebasse)
 -> Continuer
-Eh doucement ! Ben qu'est-ce que t'as ?
-[[Désolé... |Fin1.2]]
-[[J'y arrive pas ! |Fin1.3]]
+Melody: Eh doucement ! Ben qu'est-ce que t'as ?
+[[Désolé... |FinNulle.2]]
+[[J'y arrive pas ! |FinNulle.3]]
 ===
-title: Fin1.2
+title: FinNulle.2
 tags: 
 colorID: 0
 position: -387,-478
 ---
-Ah... C'est pas grave tu sais.
+Melody: Ah... C'est pas grave tu sais.
 -> Mais tu voulais de la musique...
-Tu pourras me montrer un autre jour !
-[[Continuer |Fin1.4]]
+Melody: Tu pourras me montrer un autre jour !
+[[Continuer |FinNulle.4]]
 ===
-title: Fin1.3
+title: FinNulle.3
 tags: 
 colorID: 0
 position: -387,-478
 ---
-C'est bon, pas la peine de s'énerver !
-[[Continuer |Fin1.4]]
+Melody: C'est bon, pas la peine de s'énerver !
+[[Continuer |FinNulle.4]]
 ===
-title: Fin1.4
+title: FinNulle.4
 tags: 
 colorID: 0
 position: -387,-478
 ---
-Bon c'est pas tout ça, moi je dois rentrer, sinon Maman va s'inquiéter !
+Melody: Bon c'est pas tout ça, moi je dois rentrer, sinon Maman va s'inquiéter !
 -> Continuer
-Tu reviendras hein ! C'était marrant !
+Melody: Tu reviendras hein ! C'était marrant !
 -> Attends !
 (Melody est déjà repartie avec la contrebasse. Le silence retombe, les échos de ses pas disparaissent au loin.)
 -> Finir le chapitre

@@ -73,7 +73,7 @@ position:
 Je comprends, c’est pas facile tous les jours ici.
 ->...
 <<SetSpeaker Bob>>
- Moi aussi, j’ai eu une sale journée. Mon petit fère est malade, c’est la galère. Je m’appelle Bob, au fait.
+ Moi aussi, j’ai eu une sale journée. Mon petit frère est malade, c’est la galère. Je m’appelle Bob, au fait.
 [[Ton frère ?|Chimiste.61]]
 [[Compatir|Chimiste.65]]
 ===
@@ -82,7 +82,7 @@ tags:
 colorID: 0
 position: 
 ---
-Tu te moques de moi ? He, réponds !
+Tu te moques de moi ? Hé, réponds !
 ->continuer
 <<PlaySoundFx ImpactBad>>
 (Il vous aggripe l’épaule)
@@ -95,7 +95,7 @@ colorID: 0
 position: 559,-189
 ---
 <<SetSpeaker Bob>>
-On s’est déjà vu non ? Ah, peut être pas.. Moi c’est Bob. Et toi ?
+On s’est déjà vu non ? Ah, peut être pas... Moi c’est Bob. Et toi ?
 [[Moi c'est Billy |Chimiste.31]]
 [[C'est pas tes affaires. |Chimiste.32]]
 ===
@@ -157,7 +157,7 @@ position: 646,-1246
 C’est vraiment pas cher ! Seulement 10 pièces la Larme. C’est une aubaine tu sais.
 [[Négocier|Chimiste.71]]
 [[Je n'ai vraiment pas d'argent |Chimiste.72]]
-[[Je ne suis pas intérressé |Chimiste.73]]
+[[Je ne suis pas intéressé |Chimiste.73]]
 ===
 title: Chimiste.61
 tags: 
@@ -196,8 +196,8 @@ colorID: 0
 position: 1027,-1567
 ---
 J’ai de quoi t’aider à passer une bien meilleure journée ! Et pour vraiment pas cher. Une aubaine pour toi !
-[[De la nourriture |Chimiste.421]]
-[[De la drogue |Chimiste.422]]
+[[De la nourriture ? |Chimiste.421]]
+[[De la drogue ? |Chimiste.422]]
 [[Quitter l'île ? |Chimiste.423]]
 ===
 title: Chimiste.51
@@ -249,7 +249,9 @@ position: 2012,-1670
 C’est très simple ! Tu ouvres ta pipette, tu verses délicatement le contenu dans ton oeil, et pouf ! La magie opère.
 -> Et les effets ?
 Tu te sentiras comme avant, comme avant la guerre ! Mais c’est surtout la musique que tu vas entendre.. celle de tes souvenirs.
+<<if visited("Chimiste.82") is false>>
 [[Tu t'endends bien avec les Chimistes ?|Chimiste.82]]
+<<endif>>
 [[Je vois |Chimiste.83]]
 ===
 title: Chimiste.83
@@ -262,7 +264,7 @@ position: 2964,-1714
     [[Je ne sais pas trop |Chimiste.7]]
 <<else>>
     Alors, ça te tente ?
-    [[Continuer |Chimiste.9]]
+    [[Peut-être... |Chimiste.9]]
 <<endif>>
 ===
 title: Chimiste.9
@@ -270,20 +272,13 @@ tags:
 colorID: 0
 position: 2933,-1979
 ---
-Amuse toi bien ! Faut que je file, mon fère, tout ça...
+Amuse toi bien ! Faut que je file, mon frère, tout ça...
 ->Continuer
 (Il est déjà parti)
 <<PlaySoundFx Pas>>
 <<SetSpeaker none>>
 [[Prendre la Larme |Passe2.Start]]
 [[Continuer son chemin |Melody3.1]]
-===
-title: Melody3
-tags: 
-colorID: 0
-position: 2928,-2266
----
-Billy refuse : vers Melody 3
 ===
 title: Chimiste.65
 tags: 
@@ -295,12 +290,12 @@ Tu pourrais m’acheter un peu de Larmes, franchement ça m’aiderait pas mal.
 -> continuer
 Alors, ça te tente ?
 [[C'est de la drogue... |Chimiste.8]]
-[[J'ai pas d'argent |Chimiste.7]]
+[[Je n'ai pas d'argent |Chimiste.7]]
 [[C'est combien ?|Chimiste.7]]
 <<else>>
 Alors, ça te tente ?
 [[C'est de la drogue... |Chimiste.8]]
-[[J'ai pas d'argent |Chimiste.7]]
+[[Je n'ai pas d'argent |Chimiste.7]]
 [[C'est combien ?|Chimiste.7]]
 <<endif>>
 ===
@@ -334,7 +329,7 @@ tags:
 colorID: 0
 position: 1253,-1893
 ---
-Euh, non, personne ne peut quitter l’Ïle d’Ohs. C’est pas faute d’avoir essayé !
+Euh, non, personne ne peut quitter l’Île d’Ohs. C’est pas faute d’avoir essayé !
 [[Continuer |Chimiste.422]]
 ===
 title: Chimiste.422
@@ -359,7 +354,7 @@ tags:
 colorID: 0
 position: 455,-1544
 ---
-Ça ne te manque pas d’entendre la musique, mais la vrai musique, dans nos souvenirs ?
+Ça ne te manque pas d’entendre la musique, mais la vraie musique, celle de nos souvenirs ?
 [[Si |Chimiste.75]]
 ===
 title: Chimiste.74
@@ -375,7 +370,7 @@ tags:
 colorID: 0
 position: 333,-1813
 ---
-Je peux te proposer pour 8, mais parce que c’est toi.
+Je peux te la proposer pour 8, mais parce que c’est toi.
 [[Payer 8 pièces|Chimiste.74]]
 [[C'est encore trop cher |Chimiste.76]]
 [[Refuser |Chimiste.73]]
@@ -437,7 +432,7 @@ position: -530,-519
 ---
 (Vous vous approchez de la source du son, qui devient de plus en plus désagréable.)
 -> Continuer
-(Dans un angle de la rue, vous trouvez une petite fille avec une contrebasse dans les mains.)
+(Dans un coin de la rue, vous trouvez une petite fille avec une contrebasse dans les mains.)
 [[S'approcher |Melody1.3.1]]
 [[Observer |Melody1.3.2]]
 [[Faire demi tour | Chimiste.1]]
@@ -449,7 +444,7 @@ position: -409,-738
 ---
 <<StopFx desacorde>>
 <<PlaySoundFx Course>>
-(Lorsqu'elle remarque votre présence, l’enfant s’arrête de jouer et s’enfuit avec sa contrebasse.)
+(Lorsqu'elle remarque votre présence, l’enfant arrête de jouer et s’enfuit avec sa contrebasse.)
 [[Retourner sur vos pas| Chimiste.1]]
 ===
 title: Melody1.3.2
@@ -490,9 +485,8 @@ Vous appercevez une silhouette qui semble venir se superposer à la réalité...
 Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
 ->Remercier Charles
 Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite
-[[Comment ça, presque |Passe.1]]
+[[Comment ça, presque ? |Passe.1]]
 [[Qui est venu ? |Passe.2]]
-
 ===
 title: Passe.1
 tags: 
@@ -500,21 +494,20 @@ colorID: 0
 position: -239,-877
 ---
 Je suis content de t’avoir transmis mon exigence, mais on en parlera plus tard. 
--> Continuer
 (Il rigole)
 -> Merci pour ça 
-Mais Billy, fait attention à ne pas faire toruner ta vie autour du jazz uniquement. D’autres choses pimentent la vie !
+Mais Billy, fait attention à ne pas faire tourner ta vie autour du jazz uniquement. D’autres choses pimentent la vie !
 -> Comme quoi ?
-Il y a des choses de la vie à côtés desquelles tu passes. La famille, les amis, le sexe !
+Il y a des choses de la vie à côté desquelles tu passes. La famille, les amis, le sexe !
 [[C'est toi ma famille |Passe.3]]
-[[J'ai déja des amis |Passe.4]]
+[[J'ai déjà des amis |Passe.4]]
 ===
 title: Passe.2
 tags: 
 colorID: 0
 position: 204,-872
 ---
-Tes collègues du Tonws’ sont venus. Je vais te présenter ma fille, et quelques collègues du grand Opéra aussi.
+Tes collègues du Towns’ sont venus. Je vais te présenter ma fille, et quelques collègues du grand Opéra aussi.
 [[Mes collègues ? |Passe.21]]
 [[Ta fille ? |Passe.22]]
 ===
@@ -535,8 +528,8 @@ colorID: 0
 position: -125,-1106
 ---
 Ah bon ? Comme qui ?
-[[Anne |Passe.41]]
-[[Le mec du son là |Passe.42]]
+[[Helen |Passe.41]]
+[[Le type du son, là |Passe.42]]
 ===
 title: Passe.32
 tags: 
@@ -559,11 +552,11 @@ tags:
 colorID: 0
 position: -636,-1743
 ---
-Je déséspère te faire rentrer un peu de sagesse dans ta caboche !
+Je désespère de faire rentrer un peu de sagesse dans ta caboche !
 -> Continuer
 <<StopMusic Jazz>>
 <<PlaySoundFx desacorde>>
-(Vous commencez à vous sentir mal...)
+(Vous commencez à vous sentir mal, votre vision se trouble...)
 -> Continuer
 Tu ne comprends rien à la vie ! Tu vas mourir seul, triste !
 -> Quoi ?
@@ -576,9 +569,9 @@ tags:
 colorID: 0
 position: -739,-2008
 ---
-AHAHAH et comment ? Tu es bloqué sur cette île maudite.. Regarde toi, à te drogué
+AHAHAH et comment ? Tu es bloqué sur cette île maudite... Regarde toi, à te droguer.
 -> C’est un moyen d’entendre la musique
-Si j’étais encore en vie, tu sais ce que j’aurais pensé de toi ? Tu es un déchet ...
+Si j’étais encore en vie, tu sais ce que j’aurais pensé de toi ? Tu es un déchet...
 -> Continuer
 <<GoPast>>
 <<StopFx desacorde>>
@@ -595,7 +588,7 @@ colorID: 0
 position: -418,-2013
 ---
  AHAHAH, tu me fais bien rire. Tu as tout sacrifié pour ta passion, il ne te reste rien maintenant.
-->C'est faux
+->C'est faux !
 Tu n’as pas capable d’apprécier la vie, même ça, tu l’as sacrifié !
 -> Continuer
 (Vous revenez à vous...)
@@ -629,9 +622,9 @@ tags:
 colorID: 0
 position: 322,-1092
 ---
-Oui, Anne et les musiciens avec qui vous aviez joué
--> Anne ?
-Je sais que la dernière fois que vous avez joué ensemble, ça ne s’est pas très bien passé...
+Oui, Helen et les musiciens avec qui tu avais joué, il y a une semaine.
+-> Helen ?
+Je sais que la dernière fois, ça ne s’est pas très bien passé, mais je suis sûre qu'elle ne t'en tiendra pas rigueur...
 -> Ah, la pianiste !
 En dehors du jazz, tu ne fais attention à rien, n’est-ce pas ?
 [[Il n’y a rien d’aussi passionnant |Passe.6]]
@@ -739,7 +732,7 @@ position: 1327,-839
 ---
 <<StopFx desacorde>>
 Hein ? Pourquoi ?
-[[Ca te faît pas mal aux oreilles ? |Melody3.5.2]]
+[[Ca ne te faît pas mal aux oreilles ? |Melody3.5.2]]
 ===
 title: Melody3.5.1.2
 tags: 
@@ -754,11 +747,11 @@ tags:
 colorID: 0
 position: 1327,-839
 ---
-(Le bruit devient vraiment insupportable. Votre vision se trouve, et vous vacillez.)
+(Le bruit devient vraiment insupportable. Votre vision se trouble, et vous vacillez.)
 -> Continuer
 <<StopFx desacorde>>
-Eh qu'est-ce qui t'arrives ? Ca va pas ?
-[[Ca te faît pas mal aux oreilles ? |Melody3.5.2]]
+Eh qu'est-ce qui t'arrives ? Ca ne va pas ?
+[[Ca ne te faît pas mal aux oreilles ? |Melody3.5.2]]
 ===
 title: Melody3.5.2
 tags: 
@@ -801,8 +794,8 @@ tags:
 colorID: 0
 position: 483,-1444
 ---
-Maman élève des cochons, mais ils sont bizarre, genre ils sont contameuné... ou un truc comme ça... Comme Sophie, quoi.
-[[Paquerette c'est ta maman ?|Melody3.4.1.1]]
+Maman élève des cochons, mais ils sont bizarre, genre ils sont contameunés... ou un truc comme ça... Comme Sophie, quoi.
+[[Sophie c'est ta maman ?|Melody3.4.1.1]]
 [["Contaminés, non ?" |Melody3.4.1.2]]
 ===
 title: Melody3.4.3
@@ -914,7 +907,7 @@ tags:
 colorID: 0
 position: 1235,-2671
 ---
-(Vous prenez la contrebasse, et comptez sur la mémoire musculaire pour vous permettre de jouer correctement.)
+(Vous prenez la contrebasse des mains de Melody, et comptez sur la mémoire musculaire pour vous permettre de jouer correctement.)
 [[Continuer |Puzzle.Start]]
 ===
 title: Melody3.4.3.1
@@ -922,7 +915,7 @@ tags:
 colorID: 0
 position: 1107,-1632
 ---
-Melody: Comme tu veux, le vieux. C’est sa contrebasse que j’ai trouvé. Et toi, tu faisais quoi comme muzique ?
+Melody: Comme tu veux, le vieux. C’est sa contrebasse que j’ai trouvée. Et toi, tu faisais quoi comme muzique ?
 [[Du jazz |Melody3.6]]
 ===
 title: Melody3.4.3.2
@@ -1037,7 +1030,7 @@ colorID: 0
 position: 
 ---
 (Vous n’arrivez pas à faire entendre la musique à Melody.)
-[[S'excuser|FinNulle.Start]]
+[[Continuer|FinNulle.Start]]
 ===
 title: Puzzle.7
 tags:
@@ -1056,6 +1049,8 @@ position: -387,-478
 ---
 <<StopFx desacorde>>
 (Vous émergez d’une sorte de coma obscur. Votre tête vous fait mal, et il vous faut un peu de temps avant de vous rappeler où vous êtes.)
+-> Continuer
+(La fillette semble avoir pris la fuite, mais la contrebasse est encore là.)
 [[Prendre la contrebasse |Fin1.2]]
 [[Laisser la contrebasse |Fin1.3]]
 ===
@@ -1064,8 +1059,6 @@ tags:
 colorID: 0
 position: -484,-735
 ---
-(La fillette semble avoir pris la fuite, mais la contrebasse est encore là.)
--> Continuer
 (Vous la ramassez. Son poids familier vous rappelle votre vie d’avant-guerre, glorieuse et remplie de concerts et de musique. Si seulement vous pouviez y retourner...)
 -> Finir le chapitre
 <<End>>

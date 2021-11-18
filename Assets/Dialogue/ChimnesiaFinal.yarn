@@ -82,6 +82,7 @@ tags:
 colorID: 0
 position: 
 ---
+<<SetSpeaker Bob focused>>
 Tu te moques de moi ? Hé, réponds !
 ->continuer
 <<PlaySoundFx ImpactBad>>
@@ -175,6 +176,7 @@ tags:
 colorID: 0
 position: 1109,-1330
 ---
+<<SetSpeaker Bob>>
 Tu vois quand tu veux. Moi aussi je passe une sale journée, je fais pas la gueule pour autant.
 [[Tranquille |Chimiste.42]]
 [[S'enerver|Chimiste.5]]
@@ -219,6 +221,7 @@ tags:
 colorID: 0
 position: 2039,-1428
 ---
+<<SetSpeaker Bob>>
 <<if visited("Chimiste.81") is false>>
 Ils peuvent faire peur, mais quand tu travailles bien, ils te protègent !
 ->Et la nourriture ?

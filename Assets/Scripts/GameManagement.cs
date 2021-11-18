@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameManagement : Singleton<GameManagement>
 {
@@ -77,12 +78,19 @@ public class GameManagement : Singleton<GameManagement>
 
     private void Evanouis(string[] parameters)
     {
-        evanouis.SetTrigger("Evanouis");
+        evanouis.SetTrigger("Evanouis");     
+    }
+
+    IEnumerator GoToPlayScene()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(0);
     }
 
     private void End(string[] parameters)
     {
         endCanvas.SetTrigger("End");
+        StartCoroutine(GoToPlayScene());
     }
 
     private void StopMusic(string[] parameters)

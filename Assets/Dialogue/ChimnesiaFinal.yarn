@@ -944,9 +944,17 @@ position:
 ---
 Attends, je connais pas ce mot. C’est quoi le rapport avec la musique ? 
 
-[[La composition|Puzzle.1]]
+[[La composition|Puzzle.1.5]]
 [[La science du son|Puzzle.2]]
 [[Des instruments|Puzzle.3]]
+===
+title: Puzzle.1.5
+tags:
+colorID: 0
+position: 
+---
+...
+[[Continuer |Puzzle.1]]
 ===
 title: Puzzle.2
 tags:
@@ -966,7 +974,15 @@ position:
 Mais ça veut rien dire ça
 [[Des harmonies|Puzzle.1]]
 [[Une philosophie de vie|Puzzle.2]]
-[[De l'Art|Puzzle.3]]
+[[De l'Art|Puzzle.3.5]]
+===
+title: Puzzle.3.5
+tags:
+colorID: 0
+position: 
+---
+...
+[[Continuer | Puzzle.3]]
 ===
 title: Puzzle.4
 tags:

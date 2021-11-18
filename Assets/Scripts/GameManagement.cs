@@ -38,10 +38,10 @@ public class GameManagement : Singleton<GameManagement>
 
     public DialogueRunner runner;
 
-    string Fin1 = "Merci d'avoir joué. Auriez-vous pu montrer à la fillette ce qu'est la musique, si vous auviez fait les choses différemment ?";
-    string Fin2 = "Merci d'avoir joué. Vous avez réussi à montrer ce que peut être la musique.";
-    string FinNulle = "Merci d'avoir joué. Auriez-vous pu montrer à la fillette ce qu'est la musique, si vous auviez fait les choses différemment ?";
-    string FinUni = "Merci d'avoir joué. Que ce serait-il passé si vous aviez pris ces Larmes ?";
+    string Fin1 = "Merci d'avoir joué.$Auriez-vous pu montrer à la fillette ce qu'est la musique, si vous auviez fait les choses différemment ?";
+    string Fin2 = "Merci d'avoir joué.$Vous avez réussi à montrer ce que peut être la musique.";
+    string FinNulle = "Merci d'avoir joué.$Auriez-vous pu montrer à la fillette ce qu'est la musique, si vous auviez fait les choses différemment ?";
+    string FinUni = "Merci d'avoir joué.$Que ce serait-il passé si vous aviez pris ces Larmes ?";
 
 
 
@@ -98,18 +98,23 @@ public class GameManagement : Singleton<GameManagement>
     {
         if(parameters[0] == "Fin1")
         {
+            Fin1 = Fin1.Replace('$', '\n');
             endText.text = Fin1;
+           
         }
         else if(parameters[0] == "Fin2")
         {
+            Fin2 = Fin2.Replace('$', '\n');
             endText.text = Fin2;
         }
         else if(parameters[0] == "FinNulle")
         {
+            FinNulle = FinNulle.Replace('$', '\n');
             endText.text = FinNulle;
         }
         else if(parameters[0] == "FinUni")
         {
+            FinUni = FinUni.Replace('$', '\n');
             endText.text = FinUni;
         }
             

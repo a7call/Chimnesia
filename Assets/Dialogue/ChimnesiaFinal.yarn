@@ -732,7 +732,7 @@ position: 1327,-839
 ---
 <<StopFx desacorde>>
 Hein ? Pourquoi ?
-[[Ca te faît pas mal aux oreilles ? |Melody3.5.2]]
+[[Ca ne te faît pas mal aux oreilles ? |Melody3.5.2]]
 ===
 title: Melody3.5.1.2
 tags: 
@@ -747,11 +747,11 @@ tags:
 colorID: 0
 position: 1327,-839
 ---
-(Le bruit devient vraiment insupportable. Votre vision se trouve, et vous vacillez.)
+(Le bruit devient vraiment insupportable. Votre vision se trouble, et vous vacillez.)
 -> Continuer
 <<StopFx desacorde>>
-Eh qu'est-ce qui t'arrives ? Ca va pas ?
-[[Ca te faît pas mal aux oreilles ? |Melody3.5.2]]
+Eh qu'est-ce qui t'arrives ? Ca ne va pas ?
+[[Ca ne te faît pas mal aux oreilles ? |Melody3.5.2]]
 ===
 title: Melody3.5.2
 tags: 
@@ -794,7 +794,7 @@ tags:
 colorID: 0
 position: 483,-1444
 ---
-Maman élève des cochons, mais ils sont bizarre, genre ils sont contameuné... ou un truc comme ça... Comme Sophie, quoi.
+Maman élève des cochons, mais ils sont bizarre, genre ils sont contameunés... ou un truc comme ça... Comme Sophie, quoi.
 [[Sophie c'est ta maman ?|Melody3.4.1.1]]
 [["Contaminés, non ?" |Melody3.4.1.2]]
 ===

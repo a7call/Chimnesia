@@ -6,13 +6,13 @@ position: -579,-458
 <<SetSpeaker none>>
 <<PlaySoundFx desacorde>>
 <<ChangeAmbiance AmbianceMeteoZone>>
-(Alors que vous marchiez dans un quartier peu peuplé à une heure tardive, vous entendez un air de musique)
+(Alors que vous marchiez dans un quartier peu peuplé à une heure tardive, vous entendez un air de musique.)
 -> .. de la musique ?
 (Enfin, vous auriez entendu un air de musique si vous n’étiez pas contaminé par le CK-2, comme toute la population de l'île.)
 -> Le CK-2 ?
 (Cette toxine a rendu les habitants de l’Ile d’Ohs sujet à une amusie de plus en plus puissante. Et cela fait déjà .. 10 ans.)
 [[L'île d'Ohs? |Initiale.2.1]]
-[[Une amusie |Initiale.2.2]]
+[[L'amusie ? |Initiale.2.2]]
 ===
 title: Initiale.2.1
 tags: 
@@ -20,6 +20,9 @@ colorID: 0
 position: -459,-678
 ---
 (La Zone, plutôt, comme on l'appelle depuis le bombardement.)
+<<if visited("Initiale.2.2") is false>>
+[[L'amusie ? |Initiale.2.2]]
+<<endif>>
 [[Continuer |Initiale.3]]
 ===
 title: Initiale.2.2
@@ -27,7 +30,10 @@ tags:
 colorID: 0
 position: -239,-678
 ---
-(Peut-être que les autres s'y sont fait, mais pour un musicien, ne plus pouvoir écouter de musique, c'est une catastrophe. Je n'entends plus qu'un bruit désagréable !)
+(Peut-être que les autres s'y sont fait, mais pour un musicien, ne plus pouvoir écouter de musique, c'est une catastrophe. À la place des mélodies qui vous sont si chères, vous n'entendez plus qu'un bruit déplaisant, voire même douloureux.)
+<<if visited("Initiale.2.1") is false>>
+[[L'île d'Ohs? |Initiale.2.1]]
+<<endif>>
 [[Continuer |Initiale.3]]
 ===
 title: Initiale.3
@@ -46,7 +52,7 @@ position: 266,-12
 ---
 <<StopFx Course>>
 <<StopFx desacorde>>
-(Quelqu’un que vous ne reconnaissez pas vous alpague)
+(Quelqu’un que vous ne reconnaissez pas vous alpague.)
 -> Continuer
 <<SetSpeaker ...>>
 Bonsoir l'ami !
@@ -73,7 +79,7 @@ position:
 Je comprends, c’est pas facile tous les jours ici.
 ->...
 <<SetSpeaker Bob>>
- Moi aussi, j’ai eu une sale journée. Mon petit frère est malade, c’est la galère. Je m’appelle Bob, au fait.
+Moi aussi, j’ai eu une sale journée. Mon petit frère est malade, c’est la galère. Je m’appelle Bob, au fait.
 [[Ton frère ?|Chimiste.61]]
 [[Compatir|Chimiste.65]]
 ===
@@ -86,7 +92,7 @@ position:
 Tu te moques de moi ? Hé, réponds !
 ->continuer
 <<PlaySoundFx ImpactBad>>
-(Il vous aggripe l’épaule)
+(Il vous agrippe l’épaule)
 [[Répondre |Chimiste.44]]
 [[S'enerver |Chimiste.5]]
 ===
@@ -124,7 +130,7 @@ tags:
 colorID: 0
 position: 312,-802
 ---
-Aaaah je comprends. T’inquiète, j’ai ce que tu cherches *clin d’oeil*
+Aaaah je comprends. T’inquiète, j’ai ce que tu cherches. *clin d’oeil*
 ->..?
 Je vends des Larmes, de bonne facture en plus ! Tu vas adorer !
 [[C'est de la drogue... |Chimiste.8]]
@@ -179,7 +185,7 @@ position: 1109,-1330
 <<SetSpeaker Bob>>
 Tu vois quand tu veux. Moi aussi je passe une sale journée, je fais pas la gueule pour autant.
 [[Tranquille |Chimiste.42]]
-[[S'enerver|Chimiste.5]]
+[[S'énerver|Chimiste.5]]
 ===
 title: Chimiste.5
 tags: 
@@ -209,11 +215,13 @@ position: 1399,-1630
 ---
 (Le chimiste vous pousse en arrière violemment)
 -> Envoyer un crochet
-    (Il esquive et vous fait trébucher)
-    -> Tomber
-        (Vous tombez sur le ventre.)
-        -> Se relever
-            (Le chimiste vous maîtrise et vous met un étrange liquide bleu dans l'oeil.)
+(Il esquive et vous fait trébucher)
+-> Tomber
+(Vous tombez sur le ventre.)
+-> Se relever
+(Le chimiste vous maîtrise et vous met un étrange liquide bleu dans l'oeil.)
+->Qu'est-ce que...
+Allez, on se reverra quand t'en voudras plus ! (Il part.)
 [[... |Passe2.Start]]
 ===
 title: Chimiste.82
@@ -225,13 +233,13 @@ position: 2039,-1428
 <<if visited("Chimiste.81") is false>>
 Ils peuvent faire peur, mais quand tu travailles bien, ils te protègent !
 ->Et la nourriture ?
-Oui, c’est vrai ce que l’on dit. Les chimistes ont un accès à de la nourriture saine, non contaminée par le CK-2 !
+Oui, c’est vrai ce que l’on dit. Les chimistes ont accès à de la nourriture saine, non contaminée par le CK-2 !
 [[Comment fonctionnent les Larmes ?|Chimiste.81]]
 [[Je vois|Chimiste.83]]
 <<else>>
 Ils peuvent faire peur, mais quand tu travailles bien, ils te protègent !
 ->Et la nourriture ?
-Oui, c’est vrai ce que l’on dit. Les chimistes ont un accès à de la nourriture saine, non contaminée par le CK-2 !
+Oui, c’est vrai ce que l’on dit. Les chimistes ont accès à de la nourriture saine, non contaminée par le CK-2 !
 [[Je vois|Chimiste.83]]
 <<endif>>
 ===
@@ -250,7 +258,7 @@ colorID: 0
 position: 2012,-1670
 ---
 C’est très simple ! Tu ouvres ta pipette, tu verses délicatement le contenu dans ton oeil, et pouf ! La magie opère.
--> Et les effets ?
+-> Et ça fait quoi ?
 Tu te sentiras comme avant, comme avant la guerre ! Mais c’est surtout la musique que tu vas entendre.. celle de tes souvenirs.
 <<if visited("Chimiste.82") is false>>
 [[Tu t'endends bien avec les Chimistes ?|Chimiste.82]]
@@ -277,7 +285,7 @@ position: 2933,-1979
 ---
 Amuse toi bien ! Faut que je file, mon frère, tout ça...
 ->Continuer
-(Il est déjà parti)
+(Il est déjà parti.)
 <<PlaySoundFx Pas>>
 <<SetSpeaker none>>
 [[Prendre la Larme |Passe2.Start]]
@@ -375,7 +383,7 @@ position: 333,-1813
 ---
 Je peux te la proposer pour 8, mais parce que c’est toi.
 [[Payer 8 pièces|Chimiste.74]]
-[[C'est encore trop cher |Chimiste.76]]
+[[C'est encore trop cher... |Chimiste.76]]
 [[Refuser |Chimiste.73]]
 ===
 title: Chimiste.78
@@ -385,7 +393,7 @@ position: 98,-2357
 ---
 <<if visited("Chimiste.81") is false>>
 (Vous avez maintenant une Larme d’Ohs sur vous.)
-[[Comment ça fonctionne |Chimiste.81]]
+[[Comment ça fonctionne ? |Chimiste.81]]
 [[Continuer |Chimiste.9]]
 <<else>>
 (Vous avez maintenant une Larme d’Ohs sur vous.)
@@ -418,13 +426,13 @@ position: 735,-2402
 <<if visited("Chimiste.81") is false>>
 Ecoute, tu prends ça, tu testes, et tu m’en dis des nouvelles.
 ->Continuer
-Le chimiste met une pipette dans votre poche. À l’intérieur, un liquide bleu semble émettre une faible lumière.
+Le chimiste glisse une pipette dans votre poche. À l’intérieur, un liquide bleu semble émettre une faible lumière.
 [[Comment ça fonctionne ? |Chimiste.81]]
 [[Ok..|Chimiste.9]]
 <<else>>
-Ecoute, tu prends ça, tu testes, et tu m’en dis des nouvelles.
+Écoute, tu prends ça, tu testes, et tu m’en dis des nouvelles.
 ->Continuer
-Le chimiste met une pipette dans votre poche. À l’intérieur, un liquide bleu semble émettre une faible lumière.
+Le chimiste glisse une pipette dans votre poche. À l’intérieur, un liquide bleu semble émettre une faible lumière.
 [[Ok..|Chimiste.9]]
 <<endif>>
 ===
@@ -445,7 +453,7 @@ tags:
 colorID: 0
 position: -409,-738
 ---
-(Vous retournez d'où vous venez)
+(Vous retournez d'où vous venez.)
 [[Continuer| Chimiste.1]]
 ===
 title: Melody1.3.1
@@ -463,7 +471,7 @@ tags:
 colorID: 0
 position: -190,-739
 ---
-(L’enfant continue de jouer. Elle n'a probablement pas plus d'une dizaine d'années.
+(L’enfant continue de jouer. Elle n'a probablement pas plus d'une dizaine d'années.)
 -> Continuer
 Elle joue avec les cordes de la contrebasse, l'air fascinée.)
 -> Continuer
@@ -489,13 +497,13 @@ position: -267,-377
 <<StopFx desacorde>>
 <<ChangeAmbiance Jazz>>
 <<PlaySoundFx ImpactBad2>>
-Vous appercevez une silhouette qui semble venir se superposer à la réalité...
+Vous apercevez une silhouette qui semble venir se superposer à la réalité...
 -> Parler à Charles
 <<SetSpeaker Charles>>
 <<CharleInterract>>
 Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
 ->Remercier Charles
-Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite
+Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite.
 [[Comment ça, presque ? |Passe.1]]
 [[Qui est venu ? |Passe.2]]
 ===
@@ -583,6 +591,7 @@ AHAHAH et comment ? Tu es bloqué sur cette île maudite... Regarde toi, à te d
 -> C’est un moyen d’entendre la musique
 Si j’étais encore en vie, tu sais ce que j’aurais pensé de toi ? Tu es un déchet...
 -> Continuer
+<<SetSpeaker none>>
 <<GoPast>>
 <<StopFx desacorde>>
 (Vous revenez à vous...)
@@ -691,8 +700,8 @@ position: 376,-715
 ---
 Oui ! Tu connais ?
 -> Je connais bien, oui...
-Trop bien ! Mais ça sert à quoi ?
-[[A jouer de la musique |Melody3.4]]
+Trop bien ! Et ça sert à quoi ?
+[[À jouer de la musique |Melody3.4]]
 ===
 title: Melody3.3.2
 tags: 
@@ -701,7 +710,7 @@ position: 772,-691
 ---
 C’est pas du bruit, le bruit, c’est désagréable. Là, c’est rigolo, tu trouves pas ?
 ->Continuer
-(Elle joue avec les cordes de la contrebasse, ce qui crée un bruit désagréable.)
+(Elle joue avec les cordes de la contrebasse, ce qui crée un bruit déplaisant.)
 [[Non|Melody3.3.2.1]]
 [[Pas vraiment |Melody3.3.1.2]]
 [[(mentir) Tu joues... bien|Melody3.5]]
@@ -730,7 +739,7 @@ position: 1327,-839
 C'est vrai, tu trouves ? Attend, je sais faire d'autres trucs aussi...
 -> Continuer
 <<PlaySoundFx desacorde>>
-(L'air désagréable joué par la fillette vous donne mal au crâne)
+(L'air désagréable joué par la fillette vous donne mal au crâne.)
 [[Ah, arrête ça ! |Melody3.5.1.1]]
 [[... tu peux arrêter s'il te plaît ? |Melody3.5.1.2]]
 [[La laisser continuer |Melody3.5.1.3]]
@@ -882,7 +891,7 @@ tags:
 colorID: 0
 position: 895,-2451
 ---
-Apprends moi la musique
+Apprends moi la musique !
 <<if visited("Passe2.Start") is false>>
 [[Continuer |Melody3.7.1]]
 <<else>>
@@ -907,9 +916,9 @@ position: 855,-2707
 -> Continuer
 Eh, qu’est que tu fais ? Tu as besoin de ça pour entendre la musique ?
 -> Continuer
-(Le monde autour de vous devient trouble)
+(Le monde autour de vous devient trouble.)
 -> Continuer
-(Vous entendez Melody s’éloigner)
+(Vous entendez Melody s’éloigner.)
 [[Continuer |Passe2.Start]]
 ===
 title: Melody3.7.2
@@ -981,7 +990,7 @@ tags:
 colorID: 0
 position: 
 ---
-Mais ça veut rien dire ça
+Mais ça veut rien dire ça...
 [[Des harmonies|Puzzle.1]]
 [[Une philosophie de vie|Puzzle.2]]
 [[De l'Art|Puzzle.3.5]]
@@ -1001,7 +1010,7 @@ position:
 ---
 La musique, c’est comme des émotions ? Je crois que je vois.. Tu peux me montrer ?
 ->Lui montrer
-(Vous posez vois doigts sur la contrebasse pour jouer une courte mélodie. )
+(Vous posez vois doigts sur la contrebasse pour jouer une courte mélodie.)
 [[Continuer|Puzzle.41]]
 ===
 title: Puzzle.41
@@ -1022,7 +1031,7 @@ position:
 ---
 C’est joli, continue !
 -> Continuer
-(Vous sentez que la musique distordue vous donne mal à la tête)
+(Vous sentez que la musique distordue vous donne mal à la tête.)
 [[La 7ème|Puzzle.43]]
 [[Sol dièse|Puzzle.5]]
 [[Sol dièse|Puzzle.5]]
@@ -1035,7 +1044,7 @@ position:
 ---
 C’est joli, continue !
 -> Continuer
-(La fillette semble apprécier, mais votre tête commence à tourner)
+(La fillette semble apprécier, mais votre tête commence à tourner.)
 
 [[Ré mineure 7èmé 7ème|Puzzle.7]]
 [[Sol dièse|Puzzle.5]]
@@ -1112,7 +1121,7 @@ colorID: 0
 position: -530,-519
 ---
 <<PlaySoundFx desacorde>>
-(L’exercice vous a collé une migraine monstre, et vous n’entendez qu’un bruit très  désagréable)
+(L’exercice vous a collé une migraine monstre, et vous n’entendez qu’un bruit très désagréable.)
 -> Continuer
 Mais tu es trop fort en fait !
 [[Merci |Fin2.2.2]]
@@ -1153,7 +1162,7 @@ tags:
 colorID: 0
 position: -387,-478
 ---
-(Votre incapacité à jouer correctement vous frustre, et vous reposez brusquement la contrebasse)
+(Votre incapacité à jouer correctement vous frustre, et vous reposez brusquement la contrebasse.)
 -> Continuer
 Eh doucement ! Ben qu'est-ce que t'as ?
 [[Désolé... |FinNulle.2]]

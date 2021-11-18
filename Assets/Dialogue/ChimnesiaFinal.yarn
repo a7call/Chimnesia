@@ -915,7 +915,7 @@ tags:
 colorID: 0
 position: 1107,-1632
 ---
-Melody: Comme tu veux, le vieux. C’est sa contrebasse que j’ai trouvé. Et toi, tu faisais quoi comme muzique ?
+Melody: Comme tu veux, le vieux. C’est sa contrebasse que j’ai trouvée. Et toi, tu faisais quoi comme muzique ?
 [[Du jazz |Melody3.6]]
 ===
 title: Melody3.4.3.2
@@ -1030,7 +1030,7 @@ colorID: 0
 position: 
 ---
 (Vous n’arrivez pas à faire entendre la musique à Melody.)
-[[S'excuser|FinNulle.Start]]
+[[Continuer|FinNulle.Start]]
 ===
 title: Puzzle.7
 tags:
@@ -1049,6 +1049,8 @@ position: -387,-478
 ---
 <<StopFx desacorde>>
 (Vous émergez d’une sorte de coma obscur. Votre tête vous fait mal, et il vous faut un peu de temps avant de vous rappeler où vous êtes.)
+-> Continuer
+(La fillette semble avoir pris la fuite, mais la contrebasse est encore là.)
 [[Prendre la contrebasse |Fin1.2]]
 [[Laisser la contrebasse |Fin1.3]]
 ===
@@ -1057,8 +1059,6 @@ tags:
 colorID: 0
 position: -484,-735
 ---
-(La fillette semble avoir pris la fuite, mais la contrebasse est encore là.)
--> Continuer
 (Vous la ramassez. Son poids familier vous rappelle votre vie d’avant-guerre, glorieuse et remplie de concerts et de musique. Si seulement vous pouviez y retourner...)
 -> Finir le chapitre
 <<End>>

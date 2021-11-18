@@ -1077,7 +1077,11 @@ position: -484,-735
 ---
 (Vous la ramassez. Son poids familier vous rappelle votre vie d’avant-guerre, glorieuse et remplie de concerts et de musique. Si seulement vous pouviez y retourner...)
 -> Finir le chapitre
-<<End>>
+<<if visited("Passe.1") is false>>
+<<End FinUni>>
+<<else>>
+<<End Fin1>>
+<<endif>>
 ===
 title: Fin1.3
 tags: 
@@ -1086,7 +1090,11 @@ position: -164,-733
 ---
 (Vous laissez la contrebasse, peut-être que Melody reviendra la chercher plus tard. Vous repartez de la ruelle, les bras ballants, la faim toujours au ventre. Peut-être que vous trouverez quelque chose à manger sur le chemin du retour.)
 -> Finir le chapitre
-<<End>>
+<<if visited("Passe.1") is false>>
+<<End FinUni>>
+<<else>>
+<<End Fin1>>
+<<endif>>
 ===
 title: Fin2.1
 tags: 
@@ -1124,7 +1132,11 @@ Tu reviendras hein ? Au fond, tu es vachement sympa ! A plus !
 ->Attends !
 (Avant que vous n’ayiez eu le temps de lui répondre, Melody est déjà partie. Vous vous rendez compte que vous souriez, pendant un moment emporté par la joie et l’innocence qu’elle dégage.)
 -> Finir le chapitre
-<<End>>
+<<if visited("Passe.1") is false>>
+<<End FinUni>>
+<<else>>
+<<End Fin2>>
+<<endif>>
 ===
 title: FinNulle.Start
 tags: 
@@ -1167,5 +1179,9 @@ Tu reviendras hein ! C'était marrant !
 <<SetSpeaker none>>
 (Melody est déjà repartie avec la contrebasse. Le silence retombe, les échos de ses pas disparaissent au loin.)
 -> Finir le chapitre
-<<End>>
+<<if visited("Passe.1") is false>>
+<<End FinUni>>
+<<else>>
+<<End FinNulle>>
+<<endif>>
 ===

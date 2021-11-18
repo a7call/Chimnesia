@@ -25,6 +25,7 @@ public class GameManagement : Singleton<GameManagement>
     [SerializeField] Image PastBackgroundImage;
     [SerializeField] Animator bgAnimator;
     public Animator endCanvas;
+    public TextMeshProUGUI endText;
     public Animator evanouis;
 
     //[SerializeField] TextMeshProUGUI txt_speakerName;
@@ -37,7 +38,13 @@ public class GameManagement : Singleton<GameManagement>
 
     public DialogueRunner runner;
 
-  
+    string Fin1 = "Merci d'avoir joué. Auriez-vous pu montrer à la fillette ce qu'est la musique, si vous auviez fait les choses différemment ?";
+    string Fin2 = "Merci d'avoir joué. Vous avez réussi à montrer ce que peut être la musique.";
+    string FinNulle = "Merci d'avoir joué. Auriez-vous pu montrer à la fillette ce qu'est la musique, si vous auviez fait les choses différemment ?";
+    string FinUni = "Merci d'avoir joué. Que ce serait-il passé si vous aviez pris ces Larmes ?";
+
+
+
 
     Dictionary<string, SpeakerData> speakerDataBase = new Dictionary<string, SpeakerData>();
 
@@ -83,12 +90,30 @@ public class GameManagement : Singleton<GameManagement>
 
     IEnumerator GoToPlayScene()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(6f);
         SceneManager.LoadScene(0);
     }
 
     private void End(string[] parameters)
     {
+        if(parameters[0] == "Fin1")
+        {
+            endText.text = Fin1;
+        }
+        else if(parameters[0] == "Fin2")
+        {
+            endText.text = Fin2;
+        }
+        else if(parameters[0] == "FinNulle")
+        {
+            endText.text = FinNulle;
+        }
+        else if(parameters[0] == "FinUni")
+        {
+            endText.text = FinUni;
+        }
+            
+        
         endCanvas.SetTrigger("End");
         StartCoroutine(GoToPlayScene());
     }

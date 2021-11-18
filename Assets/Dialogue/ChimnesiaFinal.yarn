@@ -435,7 +435,15 @@ position: -530,-519
 (Dans un coin de la rue, vous trouvez une petite fille avec une contrebasse dans les mains.)
 [[S'approcher |Melody1.3.1]]
 [[Observer |Melody1.3.2]]
-[[Faire demi tour | Chimiste.1]]
+[[Faire demi tour | Melody1.2]]
+===
+title: Melody1.2
+tags: 
+colorID: 0
+position: -409,-738
+---
+(Vous retournez d'où vous venez)
+[[Continuer| Chimiste.1]]
 ===
 title: Melody1.3.1
 tags: 
@@ -493,8 +501,7 @@ tags:
 colorID: 0
 position: -239,-877
 ---
-Je suis content de t’avoir transmis mon exigence, mais on en parlera plus tard. 
-(Il rigole)
+Je suis content de t’avoir transmis mon exigence, mais on en parlera plus tard. (Il rigole)
 -> Merci pour ça 
 Mais Billy, fait attention à ne pas faire tourner ta vie autour du jazz uniquement. D’autres choses pimentent la vie !
 -> Comme quoi ?
@@ -895,7 +902,7 @@ position: 855,-2707
 ---
 (Vous prenez la pipette qui vous a été donnée. Vous mettez son contenu, bleu presque lumineux, dans votre oeil droit.)
 -> Continuer
-Melody: Eh, qu’est que tu fais ? Tu as besoin de ça pour entendre la musique ?
+Eh, qu’est que tu fais ? Tu as besoin de ça pour entendre la musique ?
 -> Continuer
 (Le monde autour de vous devient trouble)
 -> Continuer
@@ -915,7 +922,7 @@ tags:
 colorID: 0
 position: 1107,-1632
 ---
-Melody: Comme tu veux, le vieux. C’est sa contrebasse que j’ai trouvée. Et toi, tu faisais quoi comme muzique ?
+Comme tu veux, le vieux. C’est sa contrebasse que j’ai trouvée. Et toi, tu faisais quoi comme muzique ?
 [[Du jazz |Melody3.6]]
 ===
 title: Melody3.4.3.2
@@ -923,9 +930,9 @@ tags:
 colorID: 0
 position: 1412,-1572
 ---
-Melody: Non, il est mort avant la cacastrophe. Moi je suis née après.
+Non, il est mort avant la catastrophe. Moi je suis née après.
 ->Née après ?
-Melody: Oui, je suis née dans La Zone. Mais j'aurais bien aimé le connaître, on est que toutes les deux avec maman.
+Oui, je suis née dans La Zone. Mais j'aurais bien aimé le connaître, on est que toutes les deux avec maman.
 [[Avec ta mère ? |Melody3.4.1]]
 ===
 title: Puzzle.Start

@@ -36,6 +36,7 @@ Melody: Bon c'est pas tout ça, moi je dois rentrer, sinon Maman va s'inquiéter
 -> Continuer
 Melody: Tu reviendras hein ! C'était marrant !
 -> Attends !
+<<SetSpeaker none>>
 (Melody est déjà repartie avec la contrebasse. Le silence retombe, les échos de ses pas disparaissent au loin.)
 -> Finir le chapitre
 ===

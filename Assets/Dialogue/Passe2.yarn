@@ -3,8 +3,15 @@ tags:
 colorID: 0
 position: -267,-377
 ---
+<<SetSpeaker none>>
+<<GoPast>>
+<<StopMusic AmbianceMeteoZone>>
+<<ChangeAmbiance Jazz>>
+<<PlaySoundFx ImpactBad2>>
 Vous appercevez une silhouette qui semble venir se superposer à la réalité...
 -> Parler à Charles
+<<SetSpeaker Charles>>
+<<CharleInterract>>
 Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
 ->Remercier Charles
 Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite
@@ -71,8 +78,8 @@ position: -353,-1463
 ---
 Anita. Joli nom, non ? J’ai toujours eu des facilités pour trouver de beaux prénoms.
 [[Elle joue du jazz ? |Passe.32]]
-<<if visited("Malody3.4.1.1") is false>>
-    [[Anita ? La mère de Melody ?|Passe.7]]
+<<if visited("Melody3.4.1.1") is false>>
+    [[La mère de Melody ?|Passe.7]]
 <<endif>>
 ===
 title: Passe.6
@@ -82,6 +89,8 @@ position: -636,-1743
 ---
 Je déséspère te faire rentrer un peu de sagesse dans ta caboche !
 -> Continuer
+<<StopMusic Jazz>>
+<<PlaySoundFx desacorde>>
 (Vous commencez à vous sentir mal...)
 -> Continuer
 Tu ne comprends rien à la vie ! Tu vas mourir seul, triste !

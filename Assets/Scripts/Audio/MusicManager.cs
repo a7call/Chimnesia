@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Audio;
+using DG.Tweening;
 
 public class MusicManager : Singleton<MusicManager>
 {
@@ -14,7 +16,7 @@ public class MusicManager : Singleton<MusicManager>
 
     private void Start()
     {
-		Play("AmbianceMeteoZone");
+		//Play("AmbianceMeteoZone");
     }
     public void Play(string sound, ulong delay = 0)
 	{
@@ -51,7 +53,7 @@ public class MusicManager : Singleton<MusicManager>
 		StartCoroutine(MusicFade(CurrentlyPlayingSound.mixerGroup.audioMixer, CurrentlyPlayingSound.mixerGroup.name + "Volume", duration, 1));
 	}
 
-	private IEnumerator MusicFade(AudioMixer audioMixer, string exposedParam, float duration, float targetVolume)
+	public IEnumerator MusicFade(AudioMixer audioMixer, string exposedParam, float duration, float targetVolume)
 	{
 		float currentTime = 0;
 		float currentVol;
@@ -68,21 +70,43 @@ public class MusicManager : Singleton<MusicManager>
 		}
 		yield break;
 	}
-	public void StopPlaying(string sound)
+	//public void StopPlaying(string sound)
+	//{
+	//	Sound s = Array.Find(sounds, item => item.name == sound);
+	//	if (s == null)
+	//	{
+	//		Debug.LogWarning("Sound: " + name + " not found!");
+	//		return;
+	//	}
+
+	//	if (s.source == null)
+	//	{
+	//		Debug.LogWarning("AudioSouce: not found!");
+	//		return;
+	//	}
+
+	//	s.source.Stop();
+	//}
+	public void Stop(string sound)
 	{
-		Sound s = Array.Find(sounds, item => item.name == sound);
-		if (s == null)
+		var sources = GetComponents<AudioSource>().ToList();
+		sources.ForEach(x =>
 		{
-			Debug.LogWarning("Sound: " + name + " not found!");
-			return;
-		}
+			var sou = Array.Find(sounds, item => item.name == sound);
+			if (sound == null)
+				return;
 
-		if (s.source == null)
-		{
-			Debug.LogWarning("AudioSouce: not found!");
-			return;
-		}
-
-		s.source.Stop();
+			if (x.clip == sou.clip)
+			{
+				var volume = x.volume;
+				x.DOFade(0, 1).OnComplete(() =>
+				{	
+					x.Stop();
+					x.DOFade(volume, 0.1f);
+				}) ;
+				
+			}
+			
+		});
 	}
 }

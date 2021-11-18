@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -387,-478
 ---
+<<StopFx desacorde>>
 (Vous émergez d’une sorte de coma obscur. Votre tête vous fait mal, et il vous faut un peu de temps avant de vous rappeler où vous êtes.)
 [[Prendre la contrebasse |contrebasseFin]]
 [[Rentrez chez vous... |rentrerMaison]]

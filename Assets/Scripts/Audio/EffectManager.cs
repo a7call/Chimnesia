@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using System.Linq;
+using DG.Tweening;
 
 public class EffectManager : Singleton<EffectManager>
 {
@@ -29,6 +31,31 @@ public class EffectManager : Singleton<EffectManager>
 			s.source.pitch = s.pitch;
 		}
 
-		s.source.PlayOneShot(s.clip, volumeScale);
+		s.source.Play();
 	}
+
+	public void Stop(string sound)
+    {
+		var sources = GetComponents<AudioSource>().ToList();
+        sources.ForEach(x =>
+        {
+			var sou = Array.Find(soundFxBank, item => item.name == sound);
+			print(x);
+			if (sound == null)
+				return;
+				
+			if (x.clip == sou.clip)
+            {
+				var volume = x.volume;
+				x.DOFade(0, 1).OnComplete(() =>
+				{
+					x.Stop();
+					x.DOFade(volume, 0.1f);
+				});
+			}
+
+		});
+
+
+    }
 }

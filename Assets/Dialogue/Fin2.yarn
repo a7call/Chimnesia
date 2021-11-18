@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -530,-519
 ---
+<<PlaySoundFx desacorde>>
 (L’exercice vous a collé une migraine monstre, et vous n’entendez qu’un bruit très  désagréable)
 -> Continuer
 Mais tu es trop fort en fait !
@@ -22,6 +23,7 @@ tags:
 colorID: 0
 position: -530,-519
 ---
+<<StopFx desacorde>>
 Tu m'apprendras à jouer comme toi ?
 ->Oui, si tu veux
 Trop bien ! Merci !

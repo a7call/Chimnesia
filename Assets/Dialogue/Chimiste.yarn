@@ -5,8 +5,8 @@ position: 266,-12
 ---
 (Quelqu’un que vous ne reconnaissez pas vous alpague)
 -> Continuer
-He, ça va mon pote ?
-
+<<SetSpeaker ...>>
+Bonsoir l'ami !
 [[Ignorer|Chimiste.4]]
 [[On se connaît ?|Chimiste.3]]
 ===
@@ -15,7 +15,8 @@ tags:
 colorID: 0
 position: 57,-311
 ---
-Fais pas cette tête. Tu paeesses une mauvaise journée ?
+Fais pas cette tête. Tu passes une mauvaise journée ?
+->Continuer
 (Il vous suit)
 [[Oui|Chimiste.41]]
 [[Pourquoi ?|Chimiste.42]]
@@ -26,9 +27,10 @@ tags:
 colorID: 0
 position: 
 ---
-Ah mon pote, je comprends tu sais. C’est pas facile tous les jours ici.
+Je comprends, c’est pas facile tous les jours ici.
 ->...
- Moi aussi, j’ai une sale journée. Mon petit fère est malade, c’est la galère. Je m’appelle Bob, au fait.
+<<SetSpeaker Bob>>
+ Moi aussi, j’ai eu une sale journée. Mon petit fère est malade, c’est la galère. Je m’appelle Bob, au fait.
 [[Ton frère ?|Chimiste.61]]
 [[Compatir|Chimiste.65]]
 ===
@@ -39,7 +41,8 @@ position:
 ---
 Tu te moques de moi ? He, réponds !
 ->continuer
-Il vous aggripe l’épaule
+<<PlaySoundFx ImpactBad>>
+(Il vous aggripe l’épaule)
 [[Répondre |Chimiste.44]]
 [[S'enerver |Chimiste.5]]
 ===
@@ -48,6 +51,7 @@ tags:
 colorID: 0
 position: 559,-189
 ---
+<<SetSpeaker Bob>>
 On s’est déjà vu non ? Ah, peut être pas.. Moi c’est Bob. Et toi ?
 [[Moi c'est Billy |Chimiste.31]]
 [[C'est pas tes affaires. |Chimiste.32]]
@@ -57,17 +61,17 @@ tags:
 colorID: 0
 position: 490,-515
 ---
-Cool, tu fais quoi là Billy? 
-[[se promener |Chimiste.311]]
-[[Chercher à manger|Chimiste.312]]
+Enchanté Billy, qu'est-ce que tu fais dans le coin ?
+[[Je me promène |Chimiste.311]]
+[[Je cherche à manger|Chimiste.312]]
 ===
 title: Chimiste.32
 tags: 
 colorID: 0
 position: 846,-476
 ---
-Woo, le prends pas comme ça. T’es soupe au lait non ?
-[[L'Ignorer |Chimiste.43]]
+Oh, le prends pas comme ça. T’es soupe au lait non ?
+[[L'ignorer |Chimiste.43]]
 [[S'excuser|Chimiste.41]]
 [[S'énerver|Chimiste.5]]
 ===
@@ -78,9 +82,9 @@ position: 312,-802
 ---
 Aaaah je comprends. T’inquiète, j’ai ce que tu cherches *clin d’oeil*
 ->..?
-Je vends des Larmes. De bonne facture en plus ! Tu vas adoré !
+Je vends des Larmes, de bonne facture en plus ! Tu vas adorer !
 [[C'est de la drogue... |Chimiste.8]]
-[[J'ai pas d'argent |Chimiste.7]]
+[[Je n'ai pas d'argent |Chimiste.7]]
 [[C'est combien ?|Chimiste.7]]
 ===
 title: Chimiste.312
@@ -88,8 +92,7 @@ tags:
 colorID: 0
 position: 966,-787
 ---
-Ah bah comme tout le monde ! Moi aussi j’ai faim tu sais.. Et mon petit frère ...
-
+Ah bah comme tout le monde ! Moi aussi j’ai faim tu sais... Et mon petit frère...
 [[Compatir |Chimiste.65]]
 [[Je m'en fiche |Chimiste.43]]
 [[Ton frère ?|Chimiste.61]]
@@ -99,7 +102,7 @@ tags:
 colorID: 0
 position: 90,-1097
 ---
-Il faut bien gagner sa vie ! C’est pas très moral, mais mieux être en bon terme avec les Chimistes, tu sais.
+Il faut bien gagner sa vie ! C’est pas très moral, mais mieux vaut être en bon terme avec les Chimistes, tu sais.
 [[Comment fonctionnent les Larmes ? |Chimiste.81]]
 [[Tu t'entends bien avec les Chimistes ? |Chimiste.82]]
 ===
@@ -110,7 +113,7 @@ position: 646,-1246
 ---
 C’est vraiment pas cher ! Seulement 10 pièces la Larme. C’est une aubaine tu sais.
 [[Négocier|Chimiste.71]]
-[[J'ai vraiment pas d'argent |Chimiste.72]]
+[[Je n'ai vraiment pas d'argent |Chimiste.72]]
 [[Je ne suis pas intérressé |Chimiste.73]]
 ===
 title: Chimiste.61
@@ -118,11 +121,11 @@ tags:
 colorID: 0
 position: 1404,-1082
 ---
-Il s’appelle Marcel, c’est un bon petit. Mais il est malade
-->Ah ouais...
-Chimiste : Il a besoin de nourriture saine, mais c’est difficile à trouver sur l’Île. Et super cher !
+Il s’appelle Marcel, c’est un bon petit, mais il est très affecté par le CK-2.
+->...
+Il a besoin de nourriture saine, mais c’est difficile à trouver sur l’Île.
 [[Chacun ses problèmes|Chimiste.65]]
-[[Ah ouais..|Chimiste.63]]
+[[...|Chimiste.63]]
 ===
 title: Chimiste.44
 tags: 
@@ -138,18 +141,18 @@ tags:
 colorID: 0
 position: 1397,-1371
 ---
-Eh, joue pas à ça avec moi. Je travaille avec les chimistes, ok ?
-->continuer
+Eh, joue pas à ça avec moi. Je travaille avec les chimistes, je te rappelle !
+->Continuer
 (Il a l’air menaçant.)
 [[Chercher la bagarre |Chimiste.51]]
-[[(calme) Les Chimistes? |Chimiste.82]]
+[[(calme) Les Chimistes ? |Chimiste.82]]
 ===
 title: Chimiste.42
 tags: 
 colorID: 0
 position: 1027,-1567
 ---
-J’ai de quoi t’aider à passer une bien meilleure journée ! Et vraiment pas cher. Une aubaine pour toi !
+J’ai de quoi t’aider à passer une bien meilleure journée ! Et pour vraiment pas cher. Une aubaine pour toi !
 [[De la nourriture |Chimiste.421]]
 [[De la drogue |Chimiste.422]]
 [[Quitter l'île ? |Chimiste.423]]
@@ -163,9 +166,9 @@ position: 1399,-1630
 -> Envoyer un crochet
     (Il esquive et vous fait trébucher)
     -> Tomber
-        Vous tombez sur le ventre.
+        (Vous tombez sur le ventre.)
         -> Se relever
-            (Le chimiste vous maîtrise et met le contenu d’une pipette, un étrange liquide bleu, dans vos yeux.)
+            (Le chimiste vous maîtrise et vous met un étrange liquide bleu dans l'oeil.)
 [[... |Passe2.Start]]
 ===
 title: Chimiste.82
@@ -173,43 +176,51 @@ tags:
 colorID: 0
 position: 2039,-1428
 ---
-Ils peuvent faire peur, mais quand tu travailles bien, ils te protègent!
+<<if visited("Chimiste.81") is false>>
+Ils peuvent faire peur, mais quand tu travailles bien, ils te protègent !
 ->Et la nourriture ?
-Oui, c’est vrai ce que l’on dit. Les chimistes ont un accès à de la nourriture saine, pas contaminée par le CK-2 !
+Oui, c’est vrai ce que l’on dit. Les chimistes ont un accès à de la nourriture saine, non contaminée par le CK-2 !
 [[Comment fonctionnent les Larmes ?|Chimiste.81]]
-[[Ah d'accord|Chimiste.83]]
+[[Je vois|Chimiste.83]]
+<<else>>
+Ils peuvent faire peur, mais quand tu travailles bien, ils te protègent !
+->Et la nourriture ?
+Oui, c’est vrai ce que l’on dit. Les chimistes ont un accès à de la nourriture saine, non contaminée par le CK-2 !
+[[Je vois|Chimiste.83]]
+<<endif>>
 ===
 title: Chimiste.91
 tags: 
 colorID: 0
 position: 1503,-1896
 ---
-Billy consomme la Larme : vers Passé 1
-->Continuer
+(Billy consomme la Larme.)
+<<PlaySoundFx ImpactBad2>>
+[[Continuer | Passe2.Start]]
 ===
 title: Chimiste.81
 tags: 
 colorID: 0
 position: 2012,-1670
 ---
-C’est très simple ! Tu ouvres ta pipette, tu verses délicatement le contenu dans ton oeil, et pouf ! La magie opère
+C’est très simple ! Tu ouvres ta pipette, tu verses délicatement le contenu dans ton oeil, et pouf ! La magie opère.
 -> Et les effets ?
-J’en envie de te dire, tu vas revoir les couleurs ! Mais c’ets surtout la musique que tu vas entendre.. celle de tes souvenirs.
+Tu te sentiras comme avant, comme avant la guerre ! Mais c’est surtout la musique que tu vas entendre.. celle de tes souvenirs.
 [[Tu t'endends bien avec les Chimistes ?|Chimiste.82]]
-[[Ah d’accord |Chimiste.83]]
+[[Je vois |Chimiste.83]]
 ===
 title: Chimiste.83
 tags: 
 colorID: 0
 position: 2964,-1714
 ---
-Alors, ça te tente ?
 <<if visited("Chimiste.7") is false>>
-    [[continuer |Chimiste.7]]
+    Alors, ça te tente ?
+    [[Je ne sais pas trop |Chimiste.7]]
 <<else>>
-    [[continuer |Chimiste.9]]
+    Alors, ça te tente ?
+    [[Continuer |Chimiste.9]]
 <<endif>>
-
 ===
 title: Chimiste.9
 tags: 
@@ -219,6 +230,7 @@ position: 2933,-1979
 Amuse toi bien ! Faut que je file, mon fère, tout ça...
 ->Continuer
 (Il est déjà parti)
+<<SetSpeaker none>>
 [[Prendre la Larme |Passe2.Start]]
 [[Continuer son chemin |Melody3.Start]]
 ===
@@ -246,8 +258,8 @@ tags:
 colorID: 0
 position: 2914,-826
 ---
-J’arrive à lui trouver de la nourriture, mais contaminée au CK-2. Il ne pourra pas guérir avec ça...
-[[Ah ouais...|Chimiste.64]]
+J’arrive à lui trouver de la nourriture, mais contaminée au CK-2. Il ne pourra pas guérir avec ça.
+[[...|Chimiste.64]]
 [[Chacun ses problèmes |Chimiste.65]]
 ===
 title: Chimiste.64
@@ -255,8 +267,7 @@ tags:
 colorID: 0
 position: 2914,-1159
 ---
-Blablabla
-(Vous n’écoutez plus ce qu’il dit.)
+Blablabla (Vous n’écoutez plus ce qu’il dit.)
 [[...|Chimiste.65]]
 ===
 title: Chimiste.421
@@ -265,7 +276,7 @@ colorID: 0
 position: 689,-1876
 ---
 Euh, pas sur moi, mais je connais des gens qui peuvent t’en vendre.
-[[Non merci.|Chimiste.422]]
+[[...|Chimiste.422]]
 ===
 title: Chimiste.423
 tags: 
@@ -280,7 +291,7 @@ tags:
 colorID: 0
 position: 953,-2147
 ---
-Je vends des Larmes. De bonne facture en plus ! Tu vas adoré !
+Je vends des Larmes. De bonne facture en plus ! Tu vas adorer !
 [[Continuer|Chimiste.66]]
 ===
 title: Chimiste.71
@@ -288,16 +299,16 @@ tags:
 colorID: 0
 position: 148,-1557
 ---
- ... Je comprends, mais on a tous nos problèmes. Moi j’ai mon frère... 
+ Je ne peux pas me permettre, je dois prendre soin de mon frère... 
 [[Payer 10 pièces|Chimiste.74]]
-[[Négocier |Chimiste.75]]
+[[Insister |Chimiste.75]]
 ===
 title: Chimiste.72
 tags: 
 colorID: 0
 position: 455,-1544
 ---
-Ca te manque pas d’entendre la musique, mais la vrai musique, dans nos souvenirs ?
+Ça ne te manque pas d’entendre la musique, mais la vrai musique, dans nos souvenirs ?
 [[Si |Chimiste.75]]
 ===
 title: Chimiste.74
@@ -315,7 +326,7 @@ position: 333,-1813
 ---
 Je peux te proposer pour 8, mais parce que c’est toi.
 [[Payer 8 pièces|Chimiste.74]]
-[[Négocier |Chimiste.76]]
+[[C'est encore trop cher |Chimiste.76]]
 [[Refuser |Chimiste.73]]
 ===
 title: Chimiste.78
@@ -323,17 +334,22 @@ tags:
 colorID: 0
 position: 98,-2357
 ---
-Vous avez maintenant une Larme d’Ohs sur vous.
+<<if visited("Chimiste.81") is false>>
+(Vous avez maintenant une Larme d’Ohs sur vous.)
 [[Comment ça fonctionne |Chimiste.81]]
-[[Ok |Chimiste.9]]
+[[Continuer |Chimiste.9]]
+<<else>>
+(Vous avez maintenant une Larme d’Ohs sur vous.)
+[[Continuer |Chimiste.9]]
+<<endif>>
 ===
 title: Chimiste.76
 tags: 
 colorID: 0
 position: 346,-2115
 ---
-Aller, 8 pièces c’est pas si cher ! C’est même un bon prix !
-[[Payer _ pièces |Chimiste.74]]
+Allez, 8 pièces c’est pas si cher ! C’est même un bon prix !
+[[Payer 8 pièces |Chimiste.74]]
 [[Refuser |Chimiste.73]]
 ===
 title: Chimiste.73
@@ -341,7 +357,7 @@ tags:
 colorID: 0
 position: 632,-2104
 ---
-Tu dis ça parce que tu as jamais tester non ? Je te jure, tu vas oublier ta faim, entendre à nouveau la musique, c’est génial !
+Tu dis ça parce que tu n'as jamais testé. Je te promets, tu vas oublier ta faim, entendre à nouveau la musique, c’est génial !
 [[Refuser |Chimiste.79]]
 [[En prendre |Chimiste.74]]
 ===
@@ -350,9 +366,16 @@ tags:
 colorID: 0
 position: 735,-2402
 ---
-Ecoute, tu prends ça, tu testes, et tu m’en dis des nouvelles, ok ?
-->continuer
-Le chimiste force Billy à prendre la Larme. Il s’agit d’une pipette en verre bouchonnée. A l’intérieur, un liquide bleu semble émettre une faible lumière.
-[[Comment ça fonctionne |Chimiste.81]]
+<<if visited("Chimiste.81") is false>>
+Ecoute, tu prends ça, tu testes, et tu m’en dis des nouvelles.
+->Continuer
+Le chimiste met une pipette dans votre poche. À l’intérieur, un liquide bleu semble émettre une faible lumière.
+[[Comment ça fonctionne ? |Chimiste.81]]
 [[Ok..|Chimiste.9]]
+<<else>>
+Ecoute, tu prends ça, tu testes, et tu m’en dis des nouvelles.
+->Continuer
+Le chimiste met une pipette dans votre poche. À l’intérieur, un liquide bleu semble émettre une faible lumière.
+[[Ok..|Chimiste.9]]
+<<endif>>
 ===

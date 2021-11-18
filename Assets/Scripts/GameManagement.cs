@@ -23,6 +23,8 @@ public class GameManagement : Singleton<GameManagement>
     [SerializeField] Image PresentBackgroundImage;
     [SerializeField] Image PastBackgroundImage;
     [SerializeField] Animator bgAnimator;
+    public Animator endCanvas;
+    public Animator evanouis;
 
     //[SerializeField] TextMeshProUGUI txt_speakerName;
 
@@ -63,15 +65,42 @@ public class GameManagement : Singleton<GameManagement>
        // dialogueUI.SetActive(false);
         runner.AddCommandHandler("SetSpeaker", SetSpeakerInfo);
         runner.AddCommandHandler("PlaySoundFx", PlaySoudFX);
+        runner.AddCommandHandler("StopFx", StopFx);
+        runner.AddCommandHandler("StopMusic", StopMusic);
         runner.AddCommandHandler("ChangeAmbiance", PlayAmbiance);
         runner.AddCommandHandler("GoPast", GoToPast);
         runner.AddCommandHandler("CharleInterract", PastCharleInteraction);
         runner.AddCommandHandler("ContrebasseInterract", PastContrebasseInteraction);
+        runner.AddCommandHandler("End", End);
+        runner.AddCommandHandler("Evanouis", Evanouis);
+    }
+
+    private void Evanouis(string[] parameters)
+    {
+        evanouis.SetTrigger("Evanouis");
+    }
+
+    private void End(string[] parameters)
+    {
+        endCanvas.SetTrigger("End");
+    }
+
+    private void StopMusic(string[] parameters)
+    {
+        var musicName = parameters[0];
+        MusicManager.GetInstance().Stop(musicName);
+    }
+
+    private void StopFx(string[] parameters)
+    {
+        var musicName = parameters[0];
+        EffectManager.GetInstance().Stop(musicName);
     }
 
     private void PlayAmbiance(string[] parameters)
     {
-        // TO BE IMPLEMENTED
+        var musicName = parameters[0];
+        MusicManager.GetInstance().Play(musicName);
     }
 
     public bool isInPresent = true;
@@ -107,7 +136,7 @@ public class GameManagement : Singleton<GameManagement>
     public void PlaySoudFX(string[] info)
     {
         string soundName = info[0];
-        EffectManager.GetInstance().Play(soundName, this.gameObject);
+        EffectManager.GetInstance().Play(soundName, EffectManager.GetInstance().gameObject);
     }
     public void MoveForward()
     {

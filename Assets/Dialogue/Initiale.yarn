@@ -5,9 +5,9 @@ position: -579,-458
 ---
 (Alors que vous marchiez dans un quartier peu peuplé à une heure tardive, vous entendez un air de musique)
 -> .. de la musique ?
-(Enfin, vous auriez entendu un air de musique si vous n’étiez pas contaminé par le CK-2, comme toute cette fichue île.)
+(Enfin, vous auriez entendu un air de musique si vous n’étiez pas contaminé par le CK-2, comme toute la population de l'île.)
 -> Le CK-2 ?
-(Cet agent chimique a rendu les habitants de l’Ile d’Ohs sujet à une amusie de plus en plus puissante. Et cela fait déjà .. 10 ans.)
+(Cette toxine a rendu les habitants de l’Ile d’Ohs sujet à une amusie de plus en plus puissante. Et cela fait déjà .. 10 ans.)
 [[L'île d'Ohs? |Initiale.2.1]]
 [[Une amusie |Initiale.2.2]]
 ===
@@ -24,7 +24,7 @@ tags:
 colorID: 0
 position: -239,-678
 ---
-(Peut-être que les autres s'y sont fait, mais pour un musicien, ne plus pouvoir écouter de musique, c'est une catastrophe. Et ce bruit qu'on entend à la place insupportable !)
+(Peut-être que les autres s'y sont fait, mais pour un musicien, ne plus pouvoir écouter de musique, c'est une catastrophe. Je n'entends plus qu'un bruit désagréable !)
 [[Continuer |Initiale.3]]
 ===
 title: Initiale.3
@@ -32,7 +32,7 @@ tags:
 colorID: 0
 position: -324,-940
 ---
-(Vous êtes intrigué par ce son. Qui pourrait bien jouer de la musique, sans être capable de l’apprécier ?)
+(Vous êtes intrigué par ce son. Qui pourrait bien jouer de la musique sans se rendre compte que c'est insupportable ?)
 [[Suivre le son |Melody1.1]]
 [[L'ignorer |Chimiste.1]]
 ===

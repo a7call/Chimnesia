@@ -5,9 +5,9 @@ position: -530,-519
 ---
 (Vous vous approchez de la source du son, qui devient de plus en plus désagréable.)
 -> Continuer
-(Dans une cour cachée de la rue par un mur en pierre, vous trouvez une petite fille avec une contrebasse dans les mains.)
-[[S'approcher |approcher]]
-[[Observer |RegarderEnfant]]
+(Dans un angle de la rue, vous trouvez une petite fille avec une contrebasse dans les mains.)
+[[S'approcher |Melody1.3.1]]
+[[Observer |Melody1.3.2]]
 [[Faire demi tour | Chimiste.1]]
 ===
 title: Melody1.3.1
@@ -15,6 +15,7 @@ tags:
 colorID: 0
 position: -409,-738
 ---
+<<StopFx desacorde>>
 (Lorsqu'elle remarque votre présence, l’enfant s’arrête de jouer et s’enfuit avec sa contrebasse.)
 [[Retourner sur vos pas| Chimiste.1]]
 ===
@@ -23,13 +24,14 @@ tags:
 colorID: 0
 position: -190,-739
 ---
-(L’enfant continue de jouer. Elle n'a probablement pas plus d'une dizaine d'années, et joue avec les cordes de la contrebasse l'air fasciné.)
+(L’enfant continue de jouer. Elle n'a probablement pas plus d'une dizaine d'années.
 -> Continuer
-(Plus elle joue avec la contrebasse, plus le bruit devient insupportable à entendre.)
+Elle joue avec les cordes de la contrebasse, l'air fascinée.)
 -> Continuer
-(La douleur devient si forte que votre vision se trouve pendant quelques secondes.)
+(La douleur provoquée par ce son devient si forte que votre vision se trouble pendant quelques secondes.)
 -> Continuer
-(Lorsque vous reprenez conscience de ce qui vous entoure, le son distordu semble avoir disparu.)
+<<StopFx desacorde>>
+(Lorsque vous reprenez conscience de ce qui vous entoure, le bruit semble avoir disparu.)
 -> Continuer
 (La petite fille à la contrebasse est partie.)
 [[Retourner sur vos pas| Chimiste.1]]

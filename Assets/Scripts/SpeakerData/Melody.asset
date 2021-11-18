@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Melody
   m_EditorClassIdentifier: 
   speakerName: Melody
-  portraitNeutral: {fileID: 0}
+  portraitNeutral: {fileID: 21300000, guid: 996e2b1b87c5253438b009f12b4b012d, type: 3}
   portraitFocused: {fileID: 0}
   portraitShocked: {fileID: 0}

@@ -73,6 +73,7 @@ position: 1327,-839
 ---
 Melody: C'est vrai, tu trouves ? Attend, je sais faire d'autres trucs aussi...
 -> Continuer
+<<PlaySoundFx desacorde>>
 (L'air désagréable joué par la fillette vous donne mal au crâne)
 [[Ah, arrête ça ! |Melody3.5.1.1]]
 [[... tu peux arrêter s'il te plaît ? |Melody3.5.1.2]]
@@ -83,6 +84,7 @@ tags:
 colorID: 0
 position: 1327,-839
 ---
+<<StopFx desacorde>>
 Melody: Hein ? Pourquoi ?
 [[Ca te faît pas mal aux oreilles ? |Melody3.5.2]]
 ===
@@ -101,6 +103,7 @@ position: 1327,-839
 ---
 (Le bruit devient vraiment insupportable. Votre vision se trouve, et vous vacillez.)
 -> Continuer
+<<StopFx desacorde>>
 Melody: Eh qu'est-ce qui t'arrives ? Ca va pas ?
 [[Ca te faît pas mal aux oreilles ? |Melody3.5.2]]
 ===

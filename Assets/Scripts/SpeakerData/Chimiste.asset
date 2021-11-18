@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e52dc351dfac74d83ab6850eb2e473, type: 3}
   m_Name: Chimiste
   m_EditorClassIdentifier: 
-  speakerName: Chimiste
-  portraitNeutral: {fileID: 0}
+  speakerName: Bob
+  portraitNeutral: {fileID: 21300000, guid: eb4c0ef7c18c23d4385fa914d38ba5ed, type: 3}
   portraitFocused: {fileID: 0}
   portraitShocked: {fileID: 0}

@@ -497,15 +497,18 @@ position: -267,-377
 <<StopFx desacorde>>
 <<ChangeAmbiance Jazz>>
 <<PlaySoundFx ImpactBad2>>
-Vous apercevez une silhouette qui semble venir se superposer à la réalité...
--> Parler à Charles
-<<SetSpeaker Charles>>
-<<CharleInterract>>
-Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
-->Remercier Charles
-Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite.
-[[Comment ça, presque ? |Passe.1]]
-[[Qui est venu ? |Passe.2]]
+Vous apercevez des silhouettes qui semblent venir se superposer à la réalité...
+->La contrebasse...
+    <<ContrebasseInterract>>
+    (C’est la contrebasse de Charles. C’est lui qui vous a appris à en jouer.)
+    -> Parler à Charles
+        <<SetSpeaker Charles>>
+        <<CharleInterract>>
+        Billy ! Bravo pour ton concert ce soir. Les autres nous attendent au bar pour fêter ça.
+        ->Remercier Charles
+        Il y a plein de gens qui attendent pour te féliciter. C’était une performance presque parfaite.
+        [[Comment ça, presque ? |Passe.1]]
+        [[Qui est venu ? |Passe.2]]
 ===
 title: Passe.1
 tags: 

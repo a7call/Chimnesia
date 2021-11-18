@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: Bob
   portraitNeutral: {fileID: 21300000, guid: eb4c0ef7c18c23d4385fa914d38ba5ed, type: 3}
-  portraitFocused: {fileID: 0}
+  portraitFocused: {fileID: 21300000, guid: 458985bc7d0bc7841af39c451ca9089d, type: 3}
   portraitShocked: {fileID: 0}

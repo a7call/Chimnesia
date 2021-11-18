@@ -81,6 +81,12 @@ public class GameManagement : Singleton<GameManagement>
         runner.AddCommandHandler("ContrebasseInterract", PastContrebasseInteraction);
         runner.AddCommandHandler("End", End);
         runner.AddCommandHandler("Evanouis", Evanouis);
+        runner.AddCommandHandler("ToMelody", ToMelody);
+    }
+
+    private void ToMelody(string[] parameters)
+    {
+        PresentBackgroundImage.GetComponent<Animator>().SetTrigger("ToMelody");
     }
 
     private void Evanouis(string[] parameters)

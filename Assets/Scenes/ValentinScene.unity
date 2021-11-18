@@ -585,15 +585,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14d59662a09470d418889a1d89a16551, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1681,15 +1681,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14d59662a09470d418889a1d89a16551, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1719,6 +1719,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toUnActive: []
+  HoverColor: {r: 0, g: 0, b: 0, a: 0}
+  HoverExitColor: {r: 0, g: 0, b: 0, a: 0}
+  HoverSprite: {fileID: 0}
+  HoverExitSprite: {fileID: 0}
 --- !u!114 &818377895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2762,15 +2766,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14d59662a09470d418889a1d89a16551, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 2e6181f1fab5f134f903db883a09579c, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2800,6 +2804,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toUnActive: []
+  HoverColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.5882353}
+  HoverExitColor: {r: 0, g: 0, b: 0, a: 1}
+  HoverSprite: {fileID: 21300000, guid: 2e6181f1fab5f134f903db883a09579c, type: 3}
+  HoverExitSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &1413069102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3152,15 +3160,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14d59662a09470d418889a1d89a16551, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3210,6 +3218,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toUnActive: []
+  HoverColor: {r: 0, g: 0, b: 0, a: 0}
+  HoverExitColor: {r: 0, g: 0, b: 0, a: 0}
+  HoverSprite: {fileID: 0}
+  HoverExitSprite: {fileID: 0}
 --- !u!114 &1469695619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3532,15 +3544,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14d59662a09470d418889a1d89a16551, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3615,6 +3627,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toUnActive: []
+  HoverColor: {r: 0, g: 0, b: 0, a: 0}
+  HoverExitColor: {r: 0, g: 0, b: 0, a: 0}
+  HoverSprite: {fileID: 0}
+  HoverExitSprite: {fileID: 0}
 --- !u!1 &1844667442
 GameObject:
   m_ObjectHideFlags: 0
